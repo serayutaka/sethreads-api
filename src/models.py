@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, LargeBinary, ForeignKey, Date, Uuid
 from sqlalchemy.orm import relationship
-from .database import Base, engine
+from .database import Base
 
 class Students(Base):
     __tablename__ = "students"
@@ -46,6 +46,7 @@ class Threads(Base):
 class ThreadsPictures(Base):
     __tablename__ = "threads_pictures"
 
+    id = Column(Integer, primary_key=True)
     from_thread = Column(Integer, ForeignKey("threads.id"))
     data = Column(LargeBinary)
     order = Column(Integer)
@@ -66,6 +67,7 @@ class Comments(Base):
 class CommentsPictures(Base):
     __tablename__ = "comments_pictures"
 
+    id = Column(Integer, primary_key=True)
     from_comment = Column(Integer, ForeignKey("comments.id"))
     data = Column(LargeBinary)
 
@@ -79,6 +81,3 @@ class SubComments(Base):
     create_at = Column(Date)
     
     author = relationship("Students", back_populates="reply")
-
-
-Base.metadata.create_all(bind=engine)
