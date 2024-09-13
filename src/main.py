@@ -6,12 +6,16 @@ from .database import SessionLocal
 from . import models
 from .database import engine
 
+from src.schemas import Student
+
 app = FastAPI()
 
 models.Base.metadata.create_all(bind=engine)
 
-ResolvingSeeder(SessionLocal()).load_entities_from_json_file("src/seed.json")
-SessionLocal().commit()
+with SessionLocal() as session:
+    ResolvingSeeder(session).load_entities_from_json_file("src/seed.json")
+    session.commit()
+
 
 def get_db():
     db = SessionLocal()
@@ -20,6 +24,6 @@ def get_db():
     finally:
         db.close()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+@app.get("/", response_model=Student)
+def read_root(db: Session = Depends(get_db)):
+    return db.query(models.Students).first()

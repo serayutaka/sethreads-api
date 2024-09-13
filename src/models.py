@@ -5,14 +5,15 @@ from .database import Base
 class Students(Base):
     __tablename__ = "students"
 
-    id = Column(Integer, primary_key=True, unique=True, index=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    student_id = Column(String)
     name = Column(String)
     surname = Column(String)
-    hashed_password = Column(String)
-    year = Column(Integer)
-    is_ta = Column(Boolean)
-    picture = Column(LargeBinary)
-    ta_course_id = Column(Integer)
+    hashed_password = Column(String, nullable=True)
+    year = Column(Integer, nullable=True)
+    is_ta = Column(Boolean, nullable=True)
+    picture = Column(LargeBinary, nullable=True)
+    ta_course_id = Column(Integer, nullable=True)
 
     registered_courses = relationship("Courses", back_populates="registered_by")
     posted = relationship("Threads", back_populates="author")
@@ -22,8 +23,8 @@ class Students(Base):
 class Courses(Base):
     __tablename__ = "courses"
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String, unique=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String)
     student_id = Column(Integer, ForeignKey("students.id"))
     
     registered_by = relationship("Students", back_populates="registered_courses")

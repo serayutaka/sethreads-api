@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-from .students import Student
 from .thread_pictures import ThreadPictures
 
 class ThreadBase(BaseModel):
@@ -10,7 +9,7 @@ class ThreadBase(BaseModel):
 class ThreadCreate(ThreadBase):
     title: str
     body: str
-    is_highlight: bool | False
+    is_highlight: bool | None = False
     create_at: str
 
     pictures: list[ThreadPictures] = []
@@ -18,11 +17,10 @@ class ThreadCreate(ThreadBase):
 class Thread(ThreadBase):
     title: str
     body: str
-    is_highlight: bool | False
+    is_highlight: bool | None = False
     create_at: str
 
     pictures: list[ThreadPictures] = []
-    author: Student
 
 
 

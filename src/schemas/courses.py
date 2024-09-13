@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-from .students import Student
 from .threads import Thread
 
 class CourseBase(BaseModel):
@@ -12,7 +11,7 @@ class CourseCreate(CourseBase):
 
 class Course(CourseBase):
     student_id: int
-    registered_by: Student
+
     forums: list[Thread] = []
 
     class Config:

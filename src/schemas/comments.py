@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-from .students import Student
 from .comment_pictures import CommentPictures
 from .subcomments import SubComment
 
@@ -21,5 +20,4 @@ class Comment(CommentBase):
 
     pictures: list[CommentPictures] = []
     subcomments: list[SubComment] = []
-    author: Student
 
