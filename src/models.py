@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, LargeBinary, ForeignKey, Date, Uuid
 from sqlalchemy.orm import relationship
-from .database import Base
+from .database import Base, engine
 
 class Students(Base):
     __tablename__ = "students"
@@ -8,6 +8,7 @@ class Students(Base):
     id = Column(Integer, primary_key=True, unique=True, index=True)
     name = Column(String)
     surname = Column(String)
+    hashed_password = Column(String)
     year = Column(Integer)
     is_ta = Column(Boolean)
     picture = Column(LargeBinary)
@@ -78,3 +79,6 @@ class SubComments(Base):
     create_at = Column(Date)
     
     author = relationship("Students", back_populates="reply")
+
+
+Base.metadata.create_all(bind=engine)
