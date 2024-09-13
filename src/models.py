@@ -14,7 +14,7 @@ class Students(Base):
     picture = Column(LargeBinary)
     ta_course_id = Column(Integer)
 
-    registered_courses = relationship("Courses")
+    registered_courses = relationship("Courses", back_populates="registered_by")
     posted = relationship("Threads", back_populates="author")
     comment = relationship("Comments", back_populates="author")
     reply = relationship("SubComments", back_populates="author")
@@ -26,7 +26,7 @@ class Courses(Base):
     name = Column(String, unique=True)
     student_id = Column(Integer, ForeignKey("students.id"))
     
-    registered_by = relationship("Students", back_populates="registered_course")
+    registered_by = relationship("Students", back_populates="registered_courses")
     forums = relationship("Threads")
 
 class Threads(Base):

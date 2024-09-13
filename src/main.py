@@ -1,14 +1,18 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
+from sqlalchemyseeder import ResolvingSeeder
+from .database import SessionLocal
 
-from src.database import SessionLocal, engine
-from src import models
-
-models.Base.metadata.create_all(bind=engine)
+from . import models
+from .database import engine
 
 app = FastAPI()
 
-# Dependency
+models.Base.metadata.create_all(bind=engine)
+
+ResolvingSeeder(SessionLocal()).load_entities_from_json_file("src/seed.json")
+SessionLocal().commit()
+
 def get_db():
     db = SessionLocal()
     try:
