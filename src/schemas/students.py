@@ -10,6 +10,7 @@ class StudentBase(BaseModel):
     id: int
 
 class StudentCreate(StudentBase):
+    student_id: str
     password: str
 
 class Student(StudentBase):
