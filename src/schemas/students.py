@@ -13,10 +13,11 @@ class StudentCreate(StudentBase):
     password: str
 
 class Student(StudentBase):
-    year: int
-    is_ta: bool
-    picture: bytes
-    ta_course_id: int
+    student_id: str
+    year: int | None
+    is_ta: bool | None
+    picture: bytes | None
+    ta_course_id: int | None
 
     registered_courses: list[Course] = []
     posted: list[Thread] = []

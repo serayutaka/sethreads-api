@@ -1,21 +1,30 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from sqlalchemyseeder import ResolvingSeeder
-from .database import SessionLocal
-
+from .database import SessionLocal, engine
 from . import models
-from .database import engine
-
 from src.schemas import Student
 
-app = FastAPI()
+def is_database_empty(session):
+    return session.query(models.Students).first() is None
 
-models.Base.metadata.create_all(bind=engine)
+def seed_database():
+    with SessionLocal() as session:
+        if is_database_empty(session):
+            ResolvingSeeder(session).load_entities_from_json_file("src/seed.json")
+            session.commit()
+            print("Database seeded successfully.")
+        else:
+            print("Database already contains data. Skipping seeding.")
 
-with SessionLocal() as session:
-    ResolvingSeeder(session).load_entities_from_json_file("src/seed.json")
-    session.commit()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    models.Base.metadata.create_all(bind=engine)
+    seed_database()
+    yield
 
+app = FastAPI(lifespan=lifespan)
 
 def get_db():
     db = SessionLocal()

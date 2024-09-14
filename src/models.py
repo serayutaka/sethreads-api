@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, LargeBinary, ForeignKey, Date, Uuid
+from sqlalchemy import Column, Integer, String, Boolean, LargeBinary, ForeignKey, Date
 from sqlalchemy.orm import relationship
 from .database import Base
 
@@ -25,7 +25,7 @@ class Courses(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
-    student_id = Column(Integer, ForeignKey("students.id"))
+    student_id = Column(String, ForeignKey("students.student_id"))
     
     registered_by = relationship("Students", back_populates="registered_courses")
     forums = relationship("Threads")
