@@ -14,6 +14,8 @@ class StudentCreate(StudentBase):
 
 class Student(StudentBase):
     student_id: str
+    name: str
+    surname: str
     year: int | None
     is_ta: bool | None
     picture: bytes | None

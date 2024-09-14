@@ -34,7 +34,7 @@ class Threads(Base):
     __tablename__ = "threads"
 
     id = Column(Integer, primary_key=True)
-    create_by = Column(Integer, ForeignKey("students.id"))
+    create_by = Column(Integer, ForeignKey("students.student_id"))
     course_id = Column(Integer, ForeignKey("courses.id"))
     title = Column(String)
     body = Column(String)
@@ -58,7 +58,7 @@ class Comments(Base):
     id = Column(Integer, primary_key=True)
     comment_from = Column(Integer, ForeignKey("threads.id"))
     comment_data = Column(String)
-    posted_by = Column(Integer, ForeignKey("students.id"))
+    posted_by = Column(Integer, ForeignKey("students.student_id"))
     create_at = Column(Date)
 
     pictures = relationship("CommentsPictures")
@@ -78,7 +78,7 @@ class SubComments(Base):
     id = Column(Integer, primary_key=True)
     reply_of = Column(Integer, ForeignKey("comments.id"))
     reply_data = Column(String)
-    posted_by = Column(Integer, ForeignKey("students.id"))
+    posted_by = Column(Integer, ForeignKey("students.student_id"))
     create_at = Column(Date)
     
     author = relationship("Students", back_populates="reply")
