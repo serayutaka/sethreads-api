@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Annotated 
 
 from .. import models, schemas
-from ..database import SessionLocal
+from ..common import get_db
 
 import bcrypt
 import jwt
@@ -12,14 +12,6 @@ from datetime import datetime, timedelta, timezone
 
 
 router = APIRouter()
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-        
 
 def hashing(password: str):
     password_bytes = password.encode("utf-8")
@@ -32,7 +24,6 @@ def signup(response: Response, student: schemas.StudentCreate, db: Session = Dep
     try:
         student = student.model_dump()
         db_student = db.query(models.Students).filter(models.Students.student_id == student["student_id"]).first()
-        print(db_student.hashed_password)
         
         if db_student.hashed_password != None:
             response.status_code = status.HTTP_409_CONFLICT
