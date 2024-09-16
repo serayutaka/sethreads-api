@@ -70,8 +70,10 @@ def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
         token = jwt.encode(payload, "mysecretpassword", algorithm="HS256")
         
         return {"successful": "Student sign in successfully", "token": token}
-    except(Exception):
-        return {"error": Exception}
+    except Exception as e:
+        response.status_code = status.HTTP_404_NOT_FOUND
+        return {"error": e}
+        
 
 class verify_token(BaseModel):
     token: str
