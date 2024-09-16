@@ -13,7 +13,7 @@ class Students(Base):
     year = Column(Integer, nullable=True)
     is_ta = Column(Boolean, nullable=True)
     picture = Column(LargeBinary, nullable=True)
-    ta_course_id = Column(Integer, nullable=True)
+    ta_course_id = Column(String, nullable=True)
 
     registered_courses = relationship("Courses", back_populates="registered_by")
     posted = relationship("Threads", back_populates="author")
@@ -34,7 +34,7 @@ class Threads(Base):
     __tablename__ = "threads"
 
     id = Column(Integer, primary_key=True)
-    create_by = Column(Integer, ForeignKey("students.student_id"))
+    create_by = Column(String, ForeignKey("students.student_id"))
     course_id = Column(Integer, ForeignKey("courses.id"))
     title = Column(String)
     body = Column(String)

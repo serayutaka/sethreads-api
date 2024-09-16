@@ -11,8 +11,7 @@ class CourseCreate(CourseBase):
 
 class Course(CourseBase):
     student_id: int
-
+    
     forums: list[Thread] = []
-
     class Config:
         orm_mode = True

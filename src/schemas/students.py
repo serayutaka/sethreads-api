@@ -20,7 +20,7 @@ class Student(StudentBase):
     year: int | None
     is_ta: bool | None
     picture: bytes | None
-    ta_course_id: int | None
+    ta_course_id: str | None
 
     registered_courses: list[Course] = []
     posted: list[Thread] = []
