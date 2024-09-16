@@ -5,247 +5,584 @@
             {
                 "student_id": "67011073",
                 "name": "ADISORN",
-                "surname": "NUMPRADIT"
+                "surname": "NUMPRADIT",
+                "year": 1
             },
             {
                 "student_id": "67011087",
                 "name": "BHAWAT",
-                "surname": "KOLKITCHAIWAN"
+                "surname": "KOLKITCHAIWAN",
+                "year": 1
             },
             {
                 "student_id": "67011090",
                 "name": "CHANANYU",
-                "surname": "CHINNAWUTH"
+                "surname": "CHINNAWUTH",
+                "year": 1
             },
             {
                 "student_id": "67011093",
                 "name": "CHAVIT",
-                "surname": "SARITDEECHAIKUL"
+                "surname": "SARITDEECHAIKUL",
+                "year": 1
             },
             {
                 "student_id": "67011096",
                 "name": "CHAYUT",
-                "surname": "PANANGKASIRI"
+                "surname": "PANANGKASIRI",
+                "year": 1
             },
             {
                 "student_id": "67011103",
                 "name": "CHIRAWAD",
-                "surname": "KOOLLACHOTE"
+                "surname": "KOOLLACHOTE",
+                "year": 1
             },
             {
                 "student_id": "67011110",
                 "name": "EKBOONYA",
-                "surname": "SRISOOK"
+                "surname": "SRISOOK",
+                "year": 1
             },
             {
                 "student_id": "67011118",
                 "name": "HSU MYAT",
-                "surname": "SHWE SIN"
+                "surname": "SHWE SIN",
+                "year": 1
             },
             {
                 "student_id": "67011140",
                 "name": "KHANIN",
-                "surname": "CHUANCHAISIT"
+                "surname": "CHUANCHAISIT",
+                "year": 1
             },
             {
                 "student_id": "67011149",
                 "name": "KONGPHOP",
-                "surname": "HONGCHAN"
+                "surname": "HONGCHAN",
+                "year": 1
             },
             {
                 "student_id": "67011152",
                 "name": "KOSES",
-                "surname": "SUVARNASUDDHI"
+                "surname": "SUVARNASUDDHI",
+                "year": 1
             },
             {
                 "student_id": "67011158",
                 "name": "KYI",
-                "surname": "THANT SIN"
+                "surname": "THANT SIN",
+                "year": 1
             },
             {
                 "student_id": "67011168",
                 "name": "MI TOE EI EI",
-                "surname": "LINN"
+                "surname": "LINN",
+                "year": 1
             },
             {
                 "student_id": "67011177",
                 "name": "NAPATRAPEE",
-                "surname": "CHIEOWWIT"
+                "surname": "CHIEOWWIT",
+                "year": 1
             },
             {
                 "student_id": "67011212",
                 "name": "NUTTAMON",
-                "surname": "KETKAEO"
+                "surname": "KETKAEO",
+                "year": 1
             },
             {
                 "student_id": "67011216",
                 "name": "NUTTHACHA",
-                "surname": "SORNARGARD"
+                "surname": "SORNARGARD",
+                "year": 1
             },
             {
                 "student_id": "67011228",
                 "name": "PANNAWHIZ",
-                "surname": "PIPATMUNKONG"
+                "surname": "PIPATMUNKONG",
+                "year": 1
             },
             {
                 "student_id": "67011235",
                 "name": "PAPHAVEE",
-                "surname": "YANMOOK"
+                "surname": "YANMOOK",
+                "year": 1
             },
             {
                 "student_id": "67011247",
                 "name": "PAYUT",
-                "surname": "KAPASUWAN"
+                "surname": "KAPASUWAN",
+                "year": 1
             },
             {
                 "student_id": "67011248",
                 "name": "PEERAPAT",
-                "surname": "PHUTTHAROTJAROEN"
+                "surname": "PHUTTHAROTJAROEN",
+                "year": 1
             },
             {
                 "student_id": "67011287",
                 "name": "RAMIDA",
-                "surname": "LAPHASPHOKIN"
+                "surname": "LAPHASPHOKIN",
+                "year": 1
             },
             {
                 "student_id": "67011297",
                 "name": "SARUN",
-                "surname": "RATTANAPAN"
+                "surname": "RATTANAPAN",
+                "year": 1
             },
             {
                 "student_id": "67011300",
                 "name": "SINGCHAYAPON",
-                "surname": "KLIENGMA"
+                "surname": "KLIENGMA",
+                "year": 1
             },
             {
                 "student_id": "67011304",
                 "name": "SIRAPOP",
-                "surname": "SATARNTRAIPOPE"
+                "surname": "SATARNTRAIPOPE",
+                "year": 1
             },
             {
                 "student_id": "67011318",
                 "name": "SUPICHAYA",
-                "surname": "RATANAOPAS"
+                "surname": "RATANAOPAS",
+                "year": 1
             },
             {
                 "student_id": "67011322",
                 "name": "SUWITCHAYA",
-                "surname": "CHINTAWAN"
+                "surname": "CHINTAWAN",
+                "year": 1
             },
             {
                 "student_id": "67011336",
                 "name": "THANAPHAT",
-                "surname": "CHONGKANANURAK"
+                "surname": "CHONGKANANURAK",
+                "year": 1
             },
             {
                 "student_id": "67011352",
                 "name": "THEEPAKORN",
-                "surname": "PHAYONRAT"
+                "surname": "PHAYONRAT",
+                "year": 1
             },
             {
                 "student_id": "67011353",
                 "name": "THEEPAPON",
-                "surname": "KHWANNA"
+                "surname": "KHWANNA",
+                "year": 1
             },
             {
                 "student_id": "67011362",
                 "name": "THUNTHANUT",
-                "surname": "TEEMAETHAWEE"
+                "surname": "TEEMAETHAWEE",
+                "year": 1
             },
             {
                 "student_id": "67011371",
                 "name": "VIRITHPHOL",
-                "surname": "THARA"
+                "surname": "THARA",
+                "year": 1
             },
             {
                 "student_id": "67011596",
                 "name": "HAN",
-                "surname": "NI AUNG"
+                "surname": "NI AUNG",
+                "year": 1
             },
             {
                 "student_id": "67011614",
                 "name": "KORAPAT",
-                "surname": "TRIPATARASIT"
+                "surname": "TRIPATARASIT",
+                "year": 1
             },
             {
                 "student_id": "67011615",
                 "name": "LA MIN",
-                "surname": "MAUNG"
+                "surname": "MAUNG",
+                "year": 1
             },
             {
                 "student_id": "67011619",
                 "name": "MAY NYEIN",
-                "surname": "CHAN"
+                "surname": "CHAN",
+                "year": 1
             },
             {
                 "student_id": "67011623",
                 "name": "MYAT SU",
-                "surname": "MON"
+                "surname": "MON",
+                "year": 1
             },
             {
                 "student_id": "67011627",
                 "name": "NOPPARATH",
-                "surname": "NONRAKSANUKUL"
+                "surname": "NONRAKSANUKUL",
+                "year": 1
             },
             {
                 "student_id": "67011629",
                 "name": "NORRAPAT",
-                "surname": "NIMDIT"
+                "surname": "NIMDIT",
+                "year": 1
             },
             {
                 "student_id": "67011637",
                 "name": "PASSAKORN",
-                "surname": "YANGNITHICHALOTHORN"
+                "surname": "YANGNITHICHALOTHORN",
+                "year": 1
             },
             {
                 "student_id": "67011638",
                 "name": "PASU",
-                "surname": "LEELAHAJIVA"
+                "surname": "LEELAHAJIVA",
+                "year": 1
             },
             {
                 "student_id": "67011641",
                 "name": "PERAPONG",
-                "surname": "PIPUGSMOOT"
+                "surname": "PIPUGSMOOT",
+                "year": 1
             },
             {
                 "student_id": "67011642",
                 "name": "PHONE MYAT PYAE",
-                "surname": "SONE"
+                "surname": "SONE",
+                "year": 1
             },
             {
                 "student_id": "67011653",
                 "name": "SAW",
-                "surname": "ZI DUNN"
+                "surname": "ZI DUNN",
+                "year": 1
             },
             {
                 "student_id": "67011669",
                 "name": "THEERASAN",
-                "surname": "SAISUTAT"
+                "surname": "SAISUTAT",
+                "year": 1
             },
             {
                 "student_id": "67011670",
                 "name": "THIRISA",
-                "surname": "KHOTKAM"
+                "surname": "KHOTKAM",
+                "year": 1
             },
             {
                 "student_id": "67011685",
                 "name": "BHANUWAT",
-                "surname": "SWASDISRI"
+                "surname": "SWASDISRI",
+                "year": 1
             },
             {
                 "student_id": "67011725",
                 "name": "SAN",
-                "surname": "AUNG"
+                "surname": "AUNG",
+                "year": 1
             },
             {
                 "student_id": "67011731",
                 "name": "THIRI THAW",
-                "surname": "THAW"
+                "surname": "THAW",
+                "year": 1
             },
             {
                 "student_id": "67011755",
                 "name": "PHOO PWINT",
-                "surname": "CHO THAR"
+                "surname": "CHO THAR",
+                "year": 1
+            },
+            {
+                "student_id": "66011525",
+                "name": "Audthanee",
+                "surname": "Supeeramongkolkul",
+                "year": 2
+            },
+            {
+                "student_id": "66010968",
+                "name": "Bowornthat",
+                "surname": "Chiangthong",
+                "year": 2
+            },
+            {
+                "student_id": "66010971",
+                "name": "Chaiyanun",
+                "surname": "Sakulsaowapakkul",
+                "year": 2
+            },
+            {
+                "student_id": "66010988",
+                "name": "Cusson",
+                "surname": "Laohapatanawong",
+                "year": 2
+            },
+            {
+                "student_id": "66010991",
+                "name": "Diyaan",
+                "surname": "Pulikkal",
+                "year": 2
+            },
+            {
+                "student_id": "66011533",
+                "name": "Eaint Kay Khaing Kyaw",
+                "surname": "--",
+                "year": 2
+            },
+            {
+                "student_id": "66011534",
+                "name": "Ei Myat",
+                "surname": "Nwe",
+                "year": 2
+            },
+            {
+                "student_id": "66011008",
+                "name": "Jirawatt",
+                "surname": "Chimmanee",
+                "year": 2
+            },
+            {
+                "student_id": "66011015",
+                "name": "Kant",
+                "surname": "Isaranucheep ",
+                "year": 2
+            },
+            {
+                "student_id": "66011036",
+                "name": "Kongfah",
+                "surname": "Sangchaisirisak",
+                "year": 2
+            },
+            {
+                "student_id": "66011041",
+                "name": "Krisdipas",
+                "surname": "Kongsakul",
+                "year": 2
+            },
+            {
+                "student_id": "66011080",
+                "name": "Natavee",
+                "surname": "Pecharat",
+                "year": 2
+            },
+            {
+                "student_id": "66011081",
+                "name": "Natchapon ",
+                "surname": "Sukthep",
+                "year": 2
+            },
+            {
+                "student_id": "66011090",
+                "name": "Nay Chi",
+                "surname": "Shunn Lei",
+                "year": 2
+            },
+            {
+                "student_id": "66011098",
+                "name": "Nuththapat",
+                "surname": "Chaloemlarpsombut",
+                "year": 2
+            },
+            {
+                "student_id": "66011099",
+                "name": "Nuttapat",
+                "surname": "Wuttiutadom",
+                "year": 2
+            },
+            {
+                "student_id": "66011107",
+                "name": "Panchaya",
+                "surname": "Wejchapinant",
+                "year": 2
+            },
+            {
+                "student_id": "66011564",
+                "name": "Panisara",
+                "surname": "Yimcharoen",
+                "year": 2
+            },
+            {
+                "student_id": "66011111",
+                "name": "Pannawat",
+                "surname": "Yorkhant",
+                "year": 2
+            },
+            {
+                "student_id": "66011121",
+                "name": "Parattakorn",
+                "surname": "Potiwanna",
+                "year": 2
+            },
+            {
+                "student_id": "66011123",
+                "name": "Parin",
+                "surname": "Vessakosol",
+                "year": 2
+            },
+            {
+                "student_id": "66011131",
+                "name": "Patarapong",
+                "surname": "Thapanapha ",
+                "year": 2
+            },
+            {
+                "student_id": "66011147",
+                "name": "Phatdanai",
+                "surname": "Khemanukul",
+                "year": 2
+            },
+            {
+                "student_id": "66011149",
+                "name": "Phatthadon",
+                "surname": "Sornplang",
+                "year": 2
+            },
+            {
+                "student_id": "66011580",
+                "name": "Phurinat",
+                "surname": "Punmerod",
+                "year": 2
+            },
+            {
+                "student_id": "66011167",
+                "name": "Piraya",
+                "surname": "Noorit",
+                "year": 2
+            },
+            {
+                "student_id": "66011582",
+                "name": "Pongchanan",
+                "surname": "Sriwanna",
+                "year": 2
+            },
+            {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2
+            },
+            {
+                "student_id": "66011193",
+                "name": "Rachatawan",
+                "surname": "Sudjarid",
+                "year": 2
+            },
+            {
+                "student_id": "66011203",
+                "name": "Sai Marn Pha",
+                "surname": "Sai",
+                "year": 2
+            },
+            {
+                "student_id": "66011209",
+                "name": "Saphon",
+                "surname": "Choochuay",
+                "year": 2
+            },
+            {
+                "student_id": "66011210",
+                "name": "Sarinda",
+                "surname": "Gunpai",
+                "year": 2
+            },
+            {
+                "student_id": "66011211",
+                "name": "Sarita",
+                "surname": "Manopatana",
+                "year": 2
+            },
+            {
+                "student_id": "66011215",
+                "name": "Satikit ",
+                "surname": "Tapbumrong",
+                "year": 2
+            },
+            {
+                "student_id": "66011217",
+                "name": "Shisa",
+                "surname": "Klaysuban",
+                "year": 2
+            },
+            {
+                "student_id": "66011596",
+                "name": "Soffan",
+                "surname": "Umar ",
+                "year": 2
+            },
+            {
+                "student_id": "66011231",
+                "name": "Sorasich",
+                "surname": "Lertwerasirikul",
+                "year": 2
+            },
+            {
+                "student_id": "66011234",
+                "name": "Sran",
+                "surname": "Jarurangsripattanakul",
+                "year": 2
+            },
+            {
+                "student_id": "66011244",
+                "name": "Syril",
+                "surname": "Tuladhar",
+                "year": 2
+            },
+            {
+                "student_id": "66011245",
+                "name": "Tada",
+                "surname": "Siangchin",
+                "year": 2
+            },
+            {
+                "student_id": "66011249",
+                "name": "Tanakrit",
+                "surname": "Doltanakarn",
+                "year": 2
+            },
+            {
+                "student_id": "66011260",
+                "name": "Thanachote",
+                "surname": "Wattanamanikul",
+                "year": 2
+            },
+            {
+                "student_id": "66011276",
+                "name": "Thunyaphon",
+                "surname": "Chumkasian",
+                "year": 2
+            },
+            {
+                "student_id": "66011606",
+                "name": "Thura",
+                "surname": "Aung",
+                "year": 2
+            },
+            {
+                "student_id": "66011277",
+                "name": "Thuwanon ",
+                "surname": "Siddhichai ",
+                "year": 2
+            },
+            {
+                "student_id": "66011288",
+                "name": "Vichaya",
+                "surname": "Roongsiripornphol ",
+                "year": 2
+            },
+            {
+                "student_id": "66011301",
+                "name": "Yanin",
+                "surname": "Sae Ma",
+                "year": 2
+            },
+            {
+                "student_id": "",
+                "name": " ",
+                "surname": "",
+                "year": 2
             }
         ]
     },
@@ -254,1179 +591,2673 @@
         "data": [
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011073"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011087"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011090"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011093"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011096"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011103"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011110"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011118"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011140"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011149"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011152"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011158"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011168"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011177"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011212"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011216"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011228"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011235"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011247"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011248"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011287"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011297"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011300"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011304"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011318"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011322"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011336"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011352"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011353"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011362"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011371"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011596"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011614"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011615"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011619"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011623"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011627"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011629"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011637"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011638"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011641"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011642"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011653"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011669"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011670"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011685"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011725"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011731"
             },
             {
                 "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
                 "student_id": "67011755"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011073"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011087"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011090"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011093"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011096"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011103"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011110"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011118"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011140"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011149"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011152"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011158"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011168"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011177"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011212"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011216"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011228"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011235"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011247"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011248"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011287"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011297"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011300"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011304"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011318"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011322"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011336"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011352"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011353"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011362"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011371"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011596"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011614"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011615"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011619"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011623"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011627"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011629"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011637"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011638"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011641"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011642"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011653"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011669"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011670"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011685"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011725"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011731"
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
                 "student_id": "67011755"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011073"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011087"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011090"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011093"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011096"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011103"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011110"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011118"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011140"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011149"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011152"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011158"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011168"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011177"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011212"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011216"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011228"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011235"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011247"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011248"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011287"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011297"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011300"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011304"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011318"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011322"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011336"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011352"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011353"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011362"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011371"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011596"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011614"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011615"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011619"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011623"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011627"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011629"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011637"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011638"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011641"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011642"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011653"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011669"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011670"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011685"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011725"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011731"
             },
             {
                 "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
                 "student_id": "67011755"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011073"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011087"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011090"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011093"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011096"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011103"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011110"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011118"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011140"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011149"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011152"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011158"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011168"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011177"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011212"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011216"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011228"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011235"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011247"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011248"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011287"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011297"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011300"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011304"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011318"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011322"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011336"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011352"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011353"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011362"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011371"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011596"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011614"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011615"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011619"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011623"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011627"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011629"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011637"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011638"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011641"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011642"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011653"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011669"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011670"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011685"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011725"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011731"
             },
             {
                 "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
                 "student_id": "67011755"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011073"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011087"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011090"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011093"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011096"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011103"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011110"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011118"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011140"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011149"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011152"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011158"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011168"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011177"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011212"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011216"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011228"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011235"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011247"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011248"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011287"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011297"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011300"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011304"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011318"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011322"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011336"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011352"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011353"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011362"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011371"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011596"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011614"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011615"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011619"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011623"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011627"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011629"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011637"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011638"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011641"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011642"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011653"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011669"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011670"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011685"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011725"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011731"
             },
             {
                 "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
                 "student_id": "67011755"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011073"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011087"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011090"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011093"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011096"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011103"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011110"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011118"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011140"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011149"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011152"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011158"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011168"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011177"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011212"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011216"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011228"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011235"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011247"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011248"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011287"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011297"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011300"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011304"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011318"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011322"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011336"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011352"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011353"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011362"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011371"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011596"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011614"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011615"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011619"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011623"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011627"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011629"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011637"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011638"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011641"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011642"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011653"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011669"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011670"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011685"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011725"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011731"
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
                 "student_id": "67011755"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011525"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66010968"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66010971"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66010988"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66010991"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011533"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011534"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011008"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011015"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011036"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011041"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011080"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011081"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011090"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011098"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011099"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011107"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011564"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011111"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011121"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011123"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011131"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011147"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011149"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011580"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011167"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011582"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011192"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011193"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011203"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011209"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011210"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011211"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011215"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011217"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011596"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011231"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011234"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011244"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011245"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011249"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011260"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011276"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011606"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011277"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011288"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "66011301"
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": ""
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011525"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66010968"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66010971"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66010988"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66010991"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011533"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011534"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011008"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011015"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011036"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011041"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011080"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011081"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011090"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011098"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011099"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011107"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011564"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011111"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011121"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011123"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011131"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011147"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011149"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011580"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011167"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011582"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011192"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011193"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011203"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011209"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011210"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011211"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011215"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011217"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011596"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011231"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011234"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011244"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011245"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011249"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011260"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011276"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011606"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011277"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011288"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "66011301"
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": ""
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011525"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66010968"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66010971"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66010988"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66010991"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011533"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011534"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011008"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011015"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011036"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011041"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011080"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011081"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011090"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011098"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011099"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011107"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011564"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011111"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011121"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011123"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011131"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011147"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011149"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011580"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011167"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011582"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011192"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011193"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011203"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011209"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011210"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011211"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011215"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011217"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011596"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011231"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011234"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011244"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011245"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011249"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011260"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011276"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011606"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011277"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011288"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "66011301"
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": ""
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011525"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66010968"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66010971"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66010988"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66010991"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011533"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011534"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011008"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011015"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011036"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011041"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011080"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011081"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011090"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011098"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011099"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011107"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011564"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011111"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011121"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011123"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011131"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011147"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011149"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011580"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011167"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011582"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011192"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011193"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011203"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011209"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011210"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011211"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011215"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011217"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011596"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011231"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011234"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011244"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011245"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011249"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011260"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011276"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011606"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011277"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011288"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "66011301"
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": ""
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011525"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66010968"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66010971"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66010988"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66010991"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011533"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011534"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011008"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011015"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011036"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011041"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011080"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011081"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011090"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011098"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011099"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011107"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011564"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011111"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011121"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011123"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011131"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011147"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011149"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011580"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011167"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011582"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011192"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011193"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011203"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011209"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011210"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011211"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011215"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011217"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011596"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011231"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011234"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011244"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011245"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011249"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011260"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011276"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011606"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011277"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011288"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "66011301"
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": ""
             }
         ]
     }

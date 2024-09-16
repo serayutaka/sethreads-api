@@ -6,7 +6,7 @@ from ..dependencies import verify_token
 router = APIRouter(
     prefix="/api",
     tags=["api"],
-    # dependencies=[Depends(verify_token)],
+    dependencies=[Depends(verify_token)],
     responses={404: {"description": "Not found"}}
 )
 
