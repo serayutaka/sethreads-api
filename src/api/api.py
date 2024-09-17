@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from .routers import student
+from .routers import student, thread
 from ..dependencies import verify_token
 
 router = APIRouter(
@@ -11,3 +11,4 @@ router = APIRouter(
 )
 
 router.include_router(student.router)
+router.include_router(thread.router)

@@ -34,9 +34,9 @@ class Courses(Base):
 class Threads(Base):
     __tablename__ = "threads"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     create_by = Column(String, ForeignKey("students.student_id"))
-    course_id = Column(Integer, ForeignKey("courses.course_id"))
+    course_id = Column(String, ForeignKey("courses.course_id"))
     title = Column(String)
     body = Column(String)
     is_highlight = Column(Boolean)
