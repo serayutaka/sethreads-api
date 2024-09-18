@@ -4,7 +4,7 @@ from ..schemas import CommentCreate, SubCommentCreate
 from .. import models
 
 def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
-    return db.query(models.Comments).filter(models.Comments.thread_id == thread_id).limit(limit).offset(offset).all()
+    return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).limit(limit).offset(offset).all()
 
 def update_comment(db: Session, db_comment: models.Comments, comment: CommentCreate):
     db_comment.comment_data = comment.comment_data
@@ -38,6 +38,7 @@ def create_subcomment(db: Session, subcomment: SubCommentCreate):
     
     db_subcomment = models.SubComments(
         reply_of = subcomment.reply_of,
+        posted_by = subcomment.posted_by,
         reply_data = subcomment.reply_data,
         create_at = subcomment.create_at
     )

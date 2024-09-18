@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from ...common import get_db
 from ...crud import student_helper
-from ...schemas import Student, Course
+from ...schemas import Student, Course, StudentAllAttributes
 
 router = APIRouter(
     prefix="/student",
@@ -11,7 +11,7 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
-@router.get("/get-info", response_model=Student)
+@router.get("/get-info", response_model=StudentAllAttributes)
 def read_student(student_id: str, db: Session = Depends(get_db)):
     db_student = student_helper.find(db, student_id)
     if db_student is None:
