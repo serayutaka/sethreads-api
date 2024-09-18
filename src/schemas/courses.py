@@ -1,6 +1,5 @@
 from pydantic import BaseModel
-
-from .threads import Thread
+from typing import List
 
 class CourseBase(BaseModel):
     course_id: str
@@ -12,6 +11,7 @@ class CourseCreate(CourseBase):
 class Course(CourseBase):
     student_id: int
 
-    forums: list[Thread] = []
+    forums: List['Thread'] = [] # type: ignore
+    
     class Config:
         orm_mode = True

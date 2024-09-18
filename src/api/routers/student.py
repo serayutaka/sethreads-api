@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException 
 from sqlalchemy.orm import Session
 
-from ...database import SessionLocal
+from ...common import get_db
 from ...crud import student_helper
-from ...dependencies import verify_token
 from ...schemas import Student, Course
 
 router = APIRouter(
@@ -11,13 +10,6 @@ router = APIRouter(
     tags=["student"],
     responses={404: {"description": "Not found"}}
 )
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 @router.get("/get-info", response_model=Student)
 def read_student(student_id: str, db: Session = Depends(get_db)):

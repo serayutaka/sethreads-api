@@ -1,23 +1,11 @@
-from .students import Student, StudentBase, StudentCreate
-from .threads import Thread, ThreadBase, ThreadCreate
-from .courses import Course, CourseBase, CourseCreate
-from .comments import Comment, CommentBase, CommentCreate
-from .subcomments import SubComment, SubCommentBase, SubCommentCreate
+from .students import Student, StudentCreate, StudentBase
+from .courses import Course, CourseCreate, CourseBase
+from .threads import Thread, ThreadCreate, ThreadBase
+from .comments import Comment, CommentCreate
+from .subcomments import SubComment, SubCommentCreate
 
-__all__ = [
-    "Student",
-    "StudentBase",
-    "StudentCreate",
-    "Thread",
-    "ThreadBase",
-    "ThreadCreate",
-    "Course",
-    "CourseBase",
-    "CourseCreate",
-    "Comment",
-    "CommentBase",
-    "CommentCreate",
-    "SubComment"
-    "SubCommentBase",
-    "SubCommentCreate"
-]
+Student.model_rebuild()
+Course.model_rebuild()
+Thread.model_rebuild()
+ThreadCreate.model_rebuild()
+Comment.model_rebuild()
