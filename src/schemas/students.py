@@ -8,32 +8,6 @@ class StudentBase(BaseModel):
 class StudentCreate(StudentBase):
     password: str
 
-class StudentWithCourses(StudentBase):
-    name: str
-    surname: str
-    year: int | None
-    is_ta: bool | None
-    picture: bytes | None
-    ta_course_id: str | None
-
-    registered_courses: List['Course'] = [] #type: ignore
-
-    class Config:
-        orm_mode = True
-
-class StudentWithThreads(StudentBase):
-    name: str
-    surname: str
-    year: int | None
-    is_ta: bool | None
-    picture: bytes | None
-    ta_course_id: str | None
-
-    posted: List['Thread'] = [] #type: ignore
-
-    class Config:
-        orm_mode = True
-
 class Student(StudentBase):
     name: str
     surname: str
@@ -45,3 +19,8 @@ class Student(StudentBase):
     class Config:
         orm_mode = True
 
+class StudentAllAttributes(Student):
+    registered_courses: List['Course'] = [] #type: ignore
+    posted: List['ThreadForStudent'] = [] #type: ignore
+    comment: List['CommentForStudent'] = [] #type: ignore
+    reply: List['SubCommentForStudent'] = [] #type: ignore

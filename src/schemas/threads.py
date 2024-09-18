@@ -12,7 +12,18 @@ class ThreadCreate(ThreadBase):
     is_highlight: bool | None = False
     create_at: str
 
+class ThreadUpdate(BaseModel):
+    title: str
+    body: str
+    is_highlight: bool | None = False
+    create_at: str
+
+class ThreadForStudent(ThreadBase):
+    title: str
+    body: str
+
 class Thread(ThreadBase):
+    id: int
     create_by: str
     title: str
     body: str
@@ -20,5 +31,8 @@ class Thread(ThreadBase):
     create_at: str
 
     author: Optional['Student'] = None # type: ignore
+
+    class Config:
+        orm_mode = True
 
 

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 
 class CommentBase(BaseModel):
@@ -8,15 +8,23 @@ class CommentBase(BaseModel):
 class CommentCreate(CommentBase):
     comment_from: int
     comment_data: str
-    posted_by: int
+    posted_by: str
+    create_at: str
+
+class CommentUpdate(BaseModel):
+    comment_data: str
+    create_at: str
+
+class CommentForStudent(CommentBase):
+    comment_data: str
     create_at: str
 
 class Comment(CommentBase):
     comment_data: str
     create_at: str
 
-    subcomments: List['SubComment'] = [] # type: ignore
-    author: List['Student'] = [] # type: ignore
+    subcomments: List['SubComment'] = None # type: ignore
+    author: Optional['Student'] = None # type: ignore
 
     class Config:
         orm_mode = True

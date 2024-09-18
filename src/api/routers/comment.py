@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from ...common import get_db
 from ...crud import comment_helper
-from ...schemas import Comment, CommentCreate, SubComment, SubCommentCreate
+from ...schemas import Comment, CommentCreate, CommentUpdate, SubComment, SubCommentCreate, SubCommentUpdate
 
 router = APIRouter(
     prefix="/comment",
@@ -19,7 +19,7 @@ def read_comments_by_thread_id(thread_id: int, limit: int, offset: int, db: Sess
     return db_comments
 
 @router.put("/update-comment", response_model=Comment)
-def update_comment(comment_id: int, comment: CommentCreate, db: Session = Depends(get_db)):
+def update_comment(comment_id: int, comment: CommentUpdate, db: Session = Depends(get_db)):
     db_comment = comment_helper.find_comment(db, comment_id)
     if db_comment is None:
         raise HTTPException(status_code=404, detail="Comment not found")
@@ -27,7 +27,9 @@ def update_comment(comment_id: int, comment: CommentCreate, db: Session = Depend
 
 @router.post("/create-comment", response_model=Comment)
 def create_comment(comment: CommentCreate, db: Session = Depends(get_db)):
-    return comment_helper.create_comment(db, comment)
+    db_comment =  comment_helper.create_comment(db, comment)
+    db.refresh(db_comment, ['subcomments', 'author'])
+    return db_comment
 
 @router.delete("/delete-comment")
 def delete_comment(comment_id: int, db: Session = Depends(get_db)):
@@ -42,7 +44,7 @@ def create_subcomment(subcomment: SubCommentCreate, db: Session = Depends(get_db
     return comment_helper.create_subcomment(db, subcomment)
 
 @router.put("/update-subcomment", response_model=SubComment)
-def update_subcomment(subcomment_id: int, subcomment: SubCommentCreate, db: Session = Depends(get_db)):
+def update_subcomment(subcomment_id: int, subcomment: SubCommentUpdate, db: Session = Depends(get_db)):
     db_subcomment = comment_helper.find_subcomment(db, subcomment_id)
     if db_subcomment is None:
         raise HTTPException(status_code=404, detail="Subcomment not found")

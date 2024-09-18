@@ -42,7 +42,7 @@ class Threads(Base):
     is_highlight = Column(Boolean)
     create_at = Column(String)
     
-    author = relationship("Students")
+    author = relationship("Students", back_populates="posted")
 
 class Comments(Base):
     __tablename__ = "comments"

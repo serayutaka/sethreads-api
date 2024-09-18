@@ -1,4 +1,4 @@
-from ..schemas import Thread, ThreadCreate, ThreadBase
+from ..schemas import Thread, ThreadCreate, ThreadBase, ThreadUpdate
 from .. import models
 
 from sqlalchemy.orm import Session
@@ -24,7 +24,7 @@ def create_thread(db: Session, thread: ThreadCreate):
     db.refresh(db_thread)
     return db_thread
 
-def update_thread(db: Session, db_thread: models.Threads, thread: ThreadCreate):
+def update_thread(db: Session, db_thread: models.Threads, thread: ThreadUpdate):
     db_thread.title = thread.title
     db_thread.body = thread.body
     db_thread.is_highlight = thread.is_highlight
