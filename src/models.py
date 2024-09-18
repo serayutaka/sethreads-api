@@ -40,18 +40,9 @@ class Threads(Base):
     title = Column(String)
     body = Column(String)
     is_highlight = Column(Boolean)
-    create_at = Column(Date)
+    create_at = Column(String)
     
-    pictures = relationship("ThreadsPictures")
-    author = relationship("Students", back_populates="posted")
-
-class ThreadsPictures(Base):
-    __tablename__ = "threads_pictures"
-
-    id = Column(Integer, primary_key=True)
-    from_thread = Column(Integer, ForeignKey("threads.id"))
-    data = Column(LargeBinary)
-    order = Column(Integer)
+    author = relationship("Students")
 
 class Comments(Base):
     __tablename__ = "comments"
@@ -59,19 +50,11 @@ class Comments(Base):
     id = Column(Integer, primary_key=True)
     comment_from = Column(Integer, ForeignKey("threads.id"))
     comment_data = Column(String)
-    posted_by = Column(Integer, ForeignKey("students.student_id"))
-    create_at = Column(Date)
+    posted_by = Column(String, ForeignKey("students.student_id"))
+    create_at = Column(String)
 
-    pictures = relationship("CommentsPictures")
     subcomments = relationship("SubComments")
     author = relationship("Students", back_populates="comment")
-
-class CommentsPictures(Base):
-    __tablename__ = "comments_pictures"
-
-    id = Column(Integer, primary_key=True)
-    from_comment = Column(Integer, ForeignKey("comments.id"))
-    data = Column(LargeBinary)
 
 class SubComments(Base):
     __tablename__ = "subcomments"
@@ -79,7 +62,7 @@ class SubComments(Base):
     id = Column(Integer, primary_key=True)
     reply_of = Column(Integer, ForeignKey("comments.id"))
     reply_data = Column(String)
-    posted_by = Column(Integer, ForeignKey("students.student_id"))
-    create_at = Column(Date)
+    posted_by = Column(String, ForeignKey("students.student_id"))
+    create_at = Column(String)
     
     author = relationship("Students", back_populates="reply")

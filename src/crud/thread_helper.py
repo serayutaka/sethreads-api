@@ -23,4 +23,16 @@ def create_thread(db: Session, thread: ThreadCreate):
     db.commit()
     db.refresh(db_thread)
     return db_thread
-    
+
+def update_thread(db: Session, db_thread: models.Threads, thread: ThreadCreate):
+    db_thread.title = thread.title
+    db_thread.body = thread.body
+    db_thread.is_highlight = thread.is_highlight
+    db_thread.create_at = thread.create_at
+    db.commit()
+    db.refresh(db_thread)
+    return db_thread
+
+def delete_thread(db: Session, thread: models.Threads):
+    db.delete(thread)
+    db.commit()

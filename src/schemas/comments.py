@@ -1,12 +1,9 @@
 from pydantic import BaseModel
-
-from .comment_pictures import CommentPictures
-from .subcomments import SubComment
+from typing import List
 
 
 class CommentBase(BaseModel):
-    id: int
-    thread_id: int
+    comment_from: int
 
 class CommentCreate(CommentBase):
     comment_from: int
@@ -18,6 +15,9 @@ class Comment(CommentBase):
     comment_data: str
     create_at: str
 
-    pictures: list[CommentPictures] = []
-    subcomments: list[SubComment] = []
+    subcomments: List['SubComment'] = [] # type: ignore
+    author: List['Student'] = [] # type: ignore
+
+    class Config:
+        orm_mode = True
 

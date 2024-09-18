@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from .thread_pictures import ThreadPictures
+from typing import List, Optional
 
 class ThreadBase(BaseModel):
     course_id: str
@@ -19,6 +19,6 @@ class Thread(ThreadBase):
     is_highlight: bool | None = False
     create_at: str
 
-
+    author: Optional['Student'] = None # type: ignore
 
 

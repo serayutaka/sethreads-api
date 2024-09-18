@@ -1,20 +1,14 @@
 from pydantic import BaseModel
-
-from .courses import Course
-from .threads import Thread
-from .comments import Comment
-from .subcomments import SubComment
+from typing import List
 
 
 class StudentBase(BaseModel):
-    id: int
+    student_id: str
 
 class StudentCreate(StudentBase):
-    student_id: str
     password: str
 
-class Student(StudentBase):
-    student_id: str
+class StudentWithCourses(StudentBase):
     name: str
     surname: str
     year: int | None
@@ -22,10 +16,31 @@ class Student(StudentBase):
     picture: bytes | None
     ta_course_id: str | None
 
-    registered_courses: list[Course] = []
-    posted: list[Thread] = []
-    comment: list[Comment] = []
-    reply: list[SubComment] = []
+    registered_courses: List['Course'] = [] #type: ignore
+
+    class Config:
+        orm_mode = True
+
+class StudentWithThreads(StudentBase):
+    name: str
+    surname: str
+    year: int | None
+    is_ta: bool | None
+    picture: bytes | None
+    ta_course_id: str | None
+
+    posted: List['Thread'] = [] #type: ignore
+
+    class Config:
+        orm_mode = True
+
+class Student(StudentBase):
+    name: str
+    surname: str
+    year: int | None
+    is_ta: bool | None
+    picture: bytes | None
+    ta_course_id: str | None
 
     class Config:
         orm_mode = True

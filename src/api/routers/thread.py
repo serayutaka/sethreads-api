@@ -29,7 +29,22 @@ def read_thread(thread_id: int, db: Session = Depends(get_db)):
 def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
     try:
         db_thread = thread_helper.create_thread(db, thread)
+        db.refresh(db_thread, ["author"])
         return db_thread
     except Exception as e:
         return e
 
+@router.put("/update-thread", response_model=Thread)
+def update_thread(thread_id: int, thread: ThreadCreate, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return thread_helper.update_thread(db, db_thread, thread)
+
+@router.delete("/delete-thread")
+def delete_thread(thread_id: int, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    thread_helper.delete_thread(db, db_thread)
+    return {"message": "Thread deleted successfully"}
