@@ -14,4 +14,4 @@ class Course(CourseBase):
     forums: List['Thread'] = [] # type: ignore
     
     class Config:
-        orm_mode = True
+        from_attributes = True

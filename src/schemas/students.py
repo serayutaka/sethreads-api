@@ -17,7 +17,7 @@ class Student(StudentBase):
     ta_course_id: str | None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class StudentAllAttributes(Student):
     registered_courses: List['Course'] = [] #type: ignore

@@ -33,6 +33,6 @@ class Thread(ThreadBase):
     author: Optional['Student'] = None # type: ignore
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 

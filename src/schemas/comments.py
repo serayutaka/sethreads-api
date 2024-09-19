@@ -27,5 +27,5 @@ class Comment(CommentBase):
     author: Optional['Student'] = None # type: ignore
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 

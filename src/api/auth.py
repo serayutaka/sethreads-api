@@ -63,7 +63,7 @@ def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
         return {"successful": "Student sign in successfully", "token": token}
     except Exception as e:
         response.status_code = status.HTTP_404_NOT_FOUND
-        return {"error": e}
+        return {"error": "Student not found"}
         
 
 class verify_token(BaseModel):
