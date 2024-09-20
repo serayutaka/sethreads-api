@@ -20,6 +20,7 @@ class CommentForStudent(CommentBase):
     create_at: str
 
 class Comment(CommentBase):
+    id: int
     comment_data: str
     create_at: str
 

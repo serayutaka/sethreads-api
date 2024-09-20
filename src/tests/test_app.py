@@ -44,6 +44,11 @@ def setup_module(module):
 def teardown_module(module):
     Base.metadata.drop_all(bind=engine)
 
+def test_read_root():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"Hello": "Hackers"}
+
 def test_signup():
     response = client.post("/sign-up", json={"student_id": "66011192", "password": "mysecretpassword"})
     assert response.status_code == 201
@@ -83,6 +88,16 @@ def test_read_student_invalid_token():
     assert response.status_code == 400
     assert response.json() == {"detail": "Invalid token"}
 
+def test_verify_token():
+    response = client.get("/verify", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {"successful": "Token verified"}
+
+def test_verify_token_invalid():
+    response = client.get("/verify", headers={"x-token": get_token() + "invalid"})
+    assert response.status_code == 401
+    assert response.json() == {"error": "Invalid token"}
+
 def test_read_student():
     response = client.get("api/student/get-info?student_id=66011192", headers={"x-token": get_token()})
     assert response.status_code == 200
@@ -92,7 +107,6 @@ def test_read_student():
         "surname": "Phondi",
         "year": 2,
         "is_ta": None,
-        "picture": None,
         "ta_course_id": None,
         "registered_courses": [
             {
@@ -130,3 +144,364 @@ def test_read_student():
         "comment": [],
         "reply": []
     }
+
+def test_read_student_not_found():
+    response = client.get("api/student/get-info?student_id=69889721", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Student not found"}
+
+def test_read_ta_courses():
+    response = client.get("api/student/get-courses?course_id=01286213", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "course_id": "01286213",
+        "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+        "student_id": 66011525,
+        "forums": []
+    }
+
+def test_read_ta_courses_not_found():
+    response = client.get("api/student/get-courses?course_id=01286214", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Course not found"}
+
+def test_create_thread():
+    response = client.post("api/thread/create-thread", json={
+        "course_id": "01286213",
+        "create_by": "66011192",
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 201
+    assert response.json() == {
+        "course_id": "01286213",
+        "id": 1,
+        "create_by": "66011192",
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00",
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+            }
+        }
+    
+def create_thread():
+    response = client.post("api/thread/create-thread", json={
+        "course_id": "01286213",
+        "create_by": "66011192",
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+
+
+def test_read_thread_by_course_id():
+    create_thread()
+    response = client.get("api/thread/get-all?course_id=01286213&limit=2&offset=0", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == [
+        {
+            "course_id": "01286213",
+            "id": 1,
+            "create_by": "66011192",
+            "title": "<h2>This is title</h2>",
+            "body": "<p>This is body</p>",
+            "is_highlight": False,
+            "create_at": "2021-09-01 12:00:00",
+            "author": {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2,
+                "is_ta": None,
+                "ta_course_id": None
+            }
+        },
+        {
+            "course_id": "01286213",
+            "id": 2,
+            "create_by": "66011192",
+            "title": "<h2>This is title</h2>",
+            "body": "<p>This is body</p>",
+            "is_highlight": False,
+            "create_at": "2021-09-01 12:00:00",
+            "author": {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2,
+                "is_ta": None,
+                "ta_course_id": None
+            }
+        }
+    ]
+
+def test_read_thread_by_course_id_not_found():
+    response = client.get("api/thread/get-all?course_id=01286214&limit=2&offset=0", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Course not found"}
+
+def test_read_thread_by_id():
+    response = client.get("api/thread/get-thread?thread_id=1", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "course_id": "01286213",
+        "id": 1,
+        "create_by": "66011192",
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00",
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+        }
+    }
+
+def test_read_thread_by_id_not_found():
+    response = client.get("api/thread/get-thread?thread_id=3", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Thread not found"}
+
+def test_update_thread():
+    response = client.put("api/thread/update-thread?thread_id=1", json={
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00"
+    }
+
+def test_update_thread_not_found():
+    response = client.put("api/thread/update-thread?thread_id=3", json={
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Thread not found"}
+
+def test_delete_thread():
+    response = client.delete("api/thread/delete-thread?thread_id=1", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {"message": "Thread deleted successfully"}
+
+def test_delete_thread_not_found():
+    response = client.delete("api/thread/delete-thread?thread_id=3", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Thread not found"}
+
+def test_create_comment():
+    response = client.post("api/comment/create-comment", json={
+        "comment_from": 1,
+        "comment_data": "<p>This is comment</p>",
+        "posted_by": "66011192",
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 201
+    assert response.json() == {
+        "comment_from": 1,
+        "id": 1,
+        "comment_data": "<p>This is comment</p>",
+        "create_at": "2021-09-01 12:00:00",
+        "subcomments": [],
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+        }
+    }
+
+def create_comment():
+    response = client.post("api/comment/create-comment", json={
+        "comment_from": 1,
+        "comment_data": "<p>This is comment</p>",
+        "posted_by": "66011192",
+        "create_at": "2021-09-01 12:00:00"
+    }, headers={"x-token": get_token()})
+
+def test_read_comment_by_thread_id():
+    create_comment()
+    response = client.get("api/comment/get-comments?thread_id=1&limit=2&offset=0", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == [
+        {
+            "comment_from": 1,
+            "id": 1,
+            "comment_data": "<p>This is comment</p>",
+            "create_at": "2021-09-01 12:00:00",
+            "subcomments": [],
+            "author": {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2,
+                "is_ta": None,
+                "ta_course_id": None
+            }
+        },
+        {
+            "comment_from": 1,
+            "id": 2,
+            "comment_data": "<p>This is comment</p>",
+            "create_at": "2021-09-01 12:00:00",
+            "subcomments": [],
+            "author": {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2,
+                "is_ta": None,
+                "ta_course_id": None
+            }
+        }
+    ]
+
+def test_read_comment_by_thread_id_not_found():
+    response = client.get("api/comment/get-comments?thread_id=2&limit=2&offset=0", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Thread not found"}
+
+def test_update_comment():
+    response = client.put("api/comment/update-comment?comment_id=1", json={
+        "comment_data": "<p>Update comment</p>",
+        "create_at": "2021-09-01 12:00:10"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+            "comment_from": 1,
+            "id": 1,
+            "comment_data": "<p>Update comment</p>",
+            "create_at": "2021-09-01 12:00:10",
+            "subcomments": [],
+            "author": {
+                "student_id": "66011192",
+                "name": "Rachata",
+                "surname": "Phondi",
+                "year": 2,
+                "is_ta": None,
+                "ta_course_id": None
+            }
+        }
+    
+def test_update_comment_not_found():
+    response = client.put("api/comment/update-comment?comment_id=3", json={
+        "comment_data": "<p>Update comment</p>",
+        "create_at": "2021-09-01 12:00:10"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Comment not found"}
+
+def test_delete_comment():
+    response = client.delete("api/comment/delete-comment?comment_id=2", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {"message": "Comment deleted successfully"}
+
+def test_delete_comment_not_found():
+    response = client.delete("api/comment/delete-comment?comment_id=3", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Comment not found"}
+
+def test_create_subcomment():
+    response = client.post("/api/comment/create-subcomment?", json={
+        "reply_of": 1,
+        "posted_by": "66011192",
+        "reply_data": "<p>u are gay</p>",
+        "create_at": "2021-09-01 12:00:10"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 201
+    assert response.json() == {
+        "reply_of": 1,
+        "posted_by": "66011192",
+        "reply_data": "<p>u are gay</p>",
+        "create_at": "2021-09-01 12:00:10",
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+        }
+    }
+
+def create_sub_comment():
+    response = client.post("/api/comment/create-subcomment", json={
+        "reply_of": 1,
+        "posted_by": "66011192",
+        "reply_data": "<p>this is another reply comment</p>",
+        "create_at": "2021-09-01 12:00:10"
+    }, headers={"x-token": get_token()})
+    
+
+def test_create_subcomment_not_found():
+    response = client.post("/api/comment/create-subcomment?", json={
+        "reply_of": 3,
+        "posted_by": "66011192",
+        "reply_data": "<p>this is another reply comment</p>",
+        "create_at": "2021-09-01 12:00:10"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Comment not found"}
+
+def test_update_subcomment():
+    response = client.put("api/comment/update-subcomment?subcomment_id=1", json={
+        "reply_data": "<p>Update subcomment</p>",
+        "create_at": "2021-09-01 12:00:12"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "reply_of": 1,
+        "posted_by": "66011192",
+        "reply_data": "<p>Update subcomment</p>",
+        "create_at": "2021-09-01 12:00:12",
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+        }
+    }
+
+def test_update_subcomment_not_found():
+    response = client.put("api/comment/update-subcomment?subcomment_id=3", json={
+        "reply_data": "<p>Update subcomment</p>",
+        "create_at": "2021-09-01 12:00:12"
+    }, headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Subcomment not found"}
+
+def test_delete_subcomment():
+    response = client.delete("api/comment/delete-subcomment?subcomment_id=1", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {"successful": "Subcomment deleted successfully"}
+
+def test_delete_subcomment_not_found():
+    response = client.delete("api/comment/delete-subcomment?subcomment_id=3", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Subcomment not found"}

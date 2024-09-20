@@ -20,7 +20,10 @@ def read_student(student_id: str, db: Session = Depends(get_db)):
 
 @router.get("/get-courses", response_model=Course)
 def read_ta_courses(course_id: str, db: Session = Depends(get_db)):
-    return student_helper.find_courses(db, course_id)
+    db_ta_course = student_helper.find_courses(db, course_id)
+    if db_ta_course is None:
+        raise HTTPException(status_code=404, detail="Course not found")
+    return db_ta_course
 
 # @router.put("/update-info", response_model=Student)
 # def update_student(student: Student, db: Session = Depends(get_db)):
