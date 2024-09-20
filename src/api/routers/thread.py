@@ -25,7 +25,7 @@ def read_thread(thread_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_thread
 
-@router.post("/create-thread", response_model=Thread)
+@router.post("/create-thread", response_model=Thread, status_code=201)
 def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
     try:
         db_thread = thread_helper.create_thread(db, thread)

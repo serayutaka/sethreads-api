@@ -4,6 +4,9 @@ from .. import models
 from sqlalchemy.orm import Session
 
 def find_by_course_id(db: Session, course_id: str, limit: int, offset: int):
+    count = db.query(models.Threads).filter(models.Threads.course_id == course_id).count()
+    if count == 0:
+        return None
     return db.query(models.Threads).filter(models.Threads.course_id == course_id).limit(limit).offset(offset)
 
 def find_thread(db: Session, thread_id: int):

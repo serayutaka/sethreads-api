@@ -13,7 +13,6 @@ class Student(StudentBase):
     surname: str
     year: int | None
     is_ta: bool | None
-    picture: bytes | None
     ta_course_id: str | None
 
     class Config:

@@ -25,7 +25,7 @@ def update_comment(comment_id: int, comment: CommentUpdate, db: Session = Depend
         raise HTTPException(status_code=404, detail="Comment not found")
     return comment_helper.update_comment(db, db_comment, comment)
 
-@router.post("/create-comment", response_model=Comment)
+@router.post("/create-comment", response_model=Comment, status_code=201)
 def create_comment(comment: CommentCreate, db: Session = Depends(get_db)):
     db_comment =  comment_helper.create_comment(db, comment)
     db.refresh(db_comment, ['subcomments', 'author'])
@@ -39,8 +39,11 @@ def delete_comment(comment_id: int, db: Session = Depends(get_db)):
     comment_helper.delete_comment(db, db_comment)
     return {"message": "Comment deleted successfully"}
 
-@router.post("/create-subcomment", response_model=SubComment)
+@router.post("/create-subcomment", response_model=SubComment, status_code=201)
 def create_subcomment(subcomment: SubCommentCreate, db: Session = Depends(get_db)):
+    db_comment = comment_helper.find_comment(db, subcomment.reply_of)
+    if db_comment is None:
+        raise HTTPException(status_code=404, detail="Comment not found")
     return comment_helper.create_subcomment(db, subcomment)
 
 @router.put("/update-subcomment", response_model=SubComment)
@@ -56,4 +59,4 @@ def delete_subcomment(subcomment_id: int, db: Session = Depends(get_db)):
     if db_subcomment is None:
         raise HTTPException(status_code=404, detail="Subcomment not found")
     comment_helper.delete_subcomment(db, db_subcomment)
-    return {"message": "Subcomment deleted successfully"}
+    return {"successful": "Subcomment deleted successfully"}
