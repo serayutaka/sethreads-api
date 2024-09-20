@@ -32,9 +32,16 @@ def signup(response: Response, student: schemas.StudentCreate, db: Session = Dep
         hashed_password = hashing(student["password"])
         db_student.hashed_password = hashed_password
         db.commit()
+
+        payload = {
+            "student_id": student["student_id"],
+            "exp": datetime.now(timezone.utc) + timedelta(hours=10),
+            "iat": datetime.now(timezone.utc),
+        }
+        token = jwt.encode(payload, "mysecretpassword", algorithm="HS256")
         
         response.status_code = status.HTTP_201_CREATED
-        return {"successful": "Student sign up successfully"}
+        return {"successful": "Student sign up successfully", "token": token}
     except(Exception):
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"error": "Student not found"}
