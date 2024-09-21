@@ -48,11 +48,16 @@ def test_read_root():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"Hello": "Hackers"}
+    
+def get_token():
+    response = client.post("/sign-in", json={"student_id": "66011192", "password": "mysecretpassword"})
+    return response.json()["token"]
 
 def test_signup():
     response = client.post("/sign-up", json={"student_id": "66011192", "password": "mysecretpassword"})
     assert response.status_code == 201
-    assert response.json() == {"successful": "Student sign up successfully"}
+    assert "successful" in response.json()
+    assert "token" in response.json()
 
 def test_signup_conflict():
     response = client.post("/sign-up", json={"student_id": "66011192", "password": "mysecretpassword"})
@@ -79,10 +84,6 @@ def test_signin_not_found():
     assert response.status_code == 404
     assert response.json() == {"error": "Student not found"}
 
-def get_token():
-    response = client.post("/sign-in", json={"student_id": "66011192", "password": "mysecretpassword"})
-    return response.json()["token"]
-
 def test_read_student_invalid_token():
     response = client.get("api/student/get-info?student_id=66011192", headers={"x-token": get_token() + "invalid"})
     assert response.status_code == 400
@@ -91,7 +92,7 @@ def test_read_student_invalid_token():
 def test_verify_token():
     response = client.get("/verify", headers={"x-token": get_token()})
     assert response.status_code == 200
-    assert response.json() == {"successful": "Token verified"}
+    assert response.json() == {"successful": "Token verified", "student_id": "66011192"}
 
 def test_verify_token_invalid():
     response = client.get("/verify", headers={"x-token": get_token() + "invalid"})
