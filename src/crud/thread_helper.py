@@ -2,6 +2,7 @@ from ..schemas import Thread, ThreadCreate, ThreadBase, ThreadUpdate, Course
 from .. import models
 
 from sqlalchemy.orm import Session
+from sqlalchemy import and_
 
 def find_by_course_id(db: Session, course_id: str, limit: int, offset: int):
     is_valid_course_id = db.query(models.Courses).filter(models.Courses.course_id == course_id).count()
@@ -14,7 +15,14 @@ def find_by_course_id(db: Session, course_id: str, limit: int, offset: int):
             return []
         return db.query(models.Threads).filter(models.Threads.course_id == course_id).limit(limit).offset(offset)
 
-def find_thread(db: Session, thread_id: int):
+def find_thread(db: Session, thread_id: int, course_id: str):
+    is_valid = db.query(models.Threads).filter(
+            models.Threads.id == thread_id,
+            models.Threads.course_id == course_id
+    ).count()
+    print(is_valid)
+    if is_valid == 0:
+        return None
     return db.query(models.Threads).filter(models.Threads.id == thread_id).first()
 
 def create_thread(db: Session, thread: ThreadCreate):
