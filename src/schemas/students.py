@@ -20,6 +20,9 @@ class Student(StudentBase):
 
 class StudentAllAttributes(Student):
     registered_courses: List['Course'] = [] #type: ignore
+    
     posted: List['ThreadForStudent'] = [] #type: ignore
     comment: List['CommentForStudent'] = [] #type: ignore
     reply: List['SubCommentForStudent'] = [] #type: ignore
+
+    
