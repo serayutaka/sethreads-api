@@ -16,11 +16,13 @@ def read_threads_by_course_id(course_id: str, limit: int, offset: int, db: Sessi
     db_threads = thread_helper.find_by_course_id(db, course_id, limit, offset)
     if db_threads is None:
         raise HTTPException(status_code=404, detail="Course not found")
+    elif db_threads == []:
+        return []
     return db_threads
 
 @router.get("/get-thread", response_model=Thread)
-def read_thread(thread_id: int, db: Session = Depends(get_db)):
-    db_thread = thread_helper.find_thread(db, thread_id)
+def read_thread(thread_id: int, course_id: str, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, thread_id, course_id)
     if db_thread is None:
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_thread

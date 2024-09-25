@@ -34,7 +34,7 @@ def signup(response: Response, student: schemas.StudentCreate, db: Session = Dep
         db.commit()
 
         payload = {
-            "student_id": student["student_id"],
+            "sub": { "student_id" : student["student_id"] },
             "exp": datetime.now(timezone.utc) + timedelta(hours=10),
             "iat": datetime.now(timezone.utc),
         }
@@ -61,7 +61,7 @@ def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
             return {"error": "Incorrect password"}
 
         payload = {
-            "student_id": student_id,
+            "sub": { "student_id" : student_id },
             "exp": datetime.now(timezone.utc) + timedelta(hours=10),
             "iat": datetime.now(timezone.utc),
         }
@@ -73,13 +73,11 @@ def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
         return {"error": "Student not found"}
         
 
-class verify_token(BaseModel):
-    token: str
 @router.get("/verify", status_code=status.HTTP_200_OK)
 def verify(response: Response, x_token: Annotated[str | None, Header()] = None):
     try:
-        jwt.decode(x_token, "mysecretpassword", algorithms=["HS256"])
-        return {"successful": "Token verified"}
+        payload = jwt.decode(x_token, "mysecretpassword", algorithms=["HS256"])
+        return {"successful": "Token verified", "student_id": payload["sub"]["student_id"]}
     except jwt.ExpiredSignatureError:
         response.status_code = status.HTTP_401_UNAUTHORIZED
         return {"error": "Token expired"}

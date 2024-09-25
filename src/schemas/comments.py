@@ -19,6 +19,9 @@ class CommentForStudent(CommentBase):
     comment_data: str
     create_at: str
 
+class CommentForThread(CommentBase):
+    id: int
+
 class Comment(CommentBase):
     id: int
     comment_data: str
