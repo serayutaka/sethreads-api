@@ -30,6 +30,7 @@ class Thread(ThreadBase):
     is_highlight: bool | None = False
     create_at: str
 
+    comments: List['CommentForThread'] = None # type: ignore
     author: Optional['Student'] = None # type: ignore
 
     class Config:

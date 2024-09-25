@@ -42,6 +42,7 @@ class Threads(Base):
     is_highlight = Column(Boolean)
     create_at = Column(String)
     
+    comments = relationship("Comments")
     author = relationship("Students", back_populates="posted")
 
 class Comments(Base):

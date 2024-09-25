@@ -184,6 +184,7 @@ def test_create_thread():
         "body": "<p>This is body</p>",
         "is_highlight": False,
         "create_at": "2021-09-01 12:00:00",
+        "comments": [],
         "author": {
             "student_id": "66011192",
             "name": "Rachata",
@@ -218,6 +219,7 @@ def test_read_thread_by_course_id():
             "body": "<p>This is body</p>",
             "is_highlight": False,
             "create_at": "2021-09-01 12:00:00",
+            "comments": [],
             "author": {
                 "student_id": "66011192",
                 "name": "Rachata",
@@ -235,6 +237,7 @@ def test_read_thread_by_course_id():
             "body": "<p>This is body</p>",
             "is_highlight": False,
             "create_at": "2021-09-01 12:00:00",
+            "comments": [],
             "author": {
                 "student_id": "66011192",
                 "name": "Rachata",
@@ -252,7 +255,7 @@ def test_read_thread_by_course_id_not_found():
     assert response.json() == {"detail": "Course not found"}
 
 def test_read_thread_by_id():
-    response = client.get("api/thread/get-thread?thread_id=1", headers={"x-token": get_token()})
+    response = client.get("api/thread/get-thread?thread_id=1&course_id=01286213", headers={"x-token": get_token()})
     assert response.status_code == 200
     assert response.json() == {
         "course_id": "01286213",
@@ -262,6 +265,7 @@ def test_read_thread_by_id():
         "body": "<p>This is body</p>",
         "is_highlight": False,
         "create_at": "2021-09-01 12:00:00",
+        "comments": [],
         "author": {
             "student_id": "66011192",
             "name": "Rachata",
@@ -273,7 +277,12 @@ def test_read_thread_by_id():
     }
 
 def test_read_thread_by_id_not_found():
-    response = client.get("api/thread/get-thread?thread_id=3", headers={"x-token": get_token()})
+    response = client.get("api/thread/get-thread?thread_id=3&course_id=01286213", headers={"x-token": get_token()})
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Thread not found"}
+
+def test_read_thread_by_id_and_course_id_not_found():
+    response = client.get("api/thread/get-thread?thread_id=2&course_id=01286214", headers={"x-token": get_token()})
     assert response.status_code == 404
     assert response.json() == {"detail": "Thread not found"}
 
@@ -303,7 +312,7 @@ def test_update_thread_not_found():
     assert response.json() == {"detail": "Thread not found"}
 
 def test_delete_thread():
-    response = client.delete("api/thread/delete-thread?thread_id=1", headers={"x-token": get_token()})
+    response = client.delete("api/thread/delete-thread?thread_id=2", headers={"x-token": get_token()})
     assert response.status_code == 200
     assert response.json() == {"message": "Thread deleted successfully"}
 
@@ -380,6 +389,37 @@ def test_read_comment_by_thread_id():
             }
         }
     ]
+
+def test_read_thread_with_comment():
+    response = client.get("api/thread/get-thread?thread_id=1&course_id=01286213", headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "course_id": "01286213",
+        "id": 1,
+        "create_by": "66011192",
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": False,
+        "create_at": "2021-09-01 12:00:00",
+        "comments": [
+            {
+                "comment_from": 1,
+                "id": 1,
+            },
+            {
+                "comment_from": 1,
+                "id": 2,
+            }
+        ],
+        "author": {
+            "student_id": "66011192",
+            "name": "Rachata",
+            "surname": "Phondi",
+            "year": 2,
+            "is_ta": None,
+            "ta_course_id": None
+        }
+    }
 
 def test_read_comment_by_thread_id_not_found():
     response = client.get("api/comment/get-comments?thread_id=2&limit=2&offset=0", headers={"x-token": get_token()})
