@@ -18,7 +18,7 @@ def read_home_comments_by_id(home_id: int, limit: int, offset: int, db: Session 
         raise HTTPException(status_code=404, detail="No comments found")
     return db_comments
 
-@router.get("/update-comment", response_model=HomeComment)
+@router.put("/update-comment", response_model=HomeComment)
 def update_home_comment(comment_id: int, comment: HomeCommentUpdate, db: Session = Depends(get_db)):
     db_comment = home_comment_helper.find_comment(db, comment_id)
     if db_comment is None:
