@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from ..schemas import CommentCreate, SubCommentCreate
+from ..schemas import CommentCreate, SubCommentCreate, CommentUpdate
 from .. import models
 
 def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
@@ -9,7 +9,7 @@ def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
         return None
     return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).limit(limit).offset(offset).all()
 
-def update_comment(db: Session, db_comment: models.Comments, comment: CommentCreate):
+def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpdate):
     db_comment.comment_data = comment.comment_data
     db_comment.create_at = comment.create_at
     db.commit()
