@@ -11,7 +11,7 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
-@router.get("/get-all", response_model=list[HomeComment])
+@router.get("/get-comments", response_model=list[HomeComment])
 def read_home_comments_by_id(home_id: int, limit: int, offset: int, db: Session = Depends(get_db)):
     db_comments = home_comment_helper.find_by_id(db, home_id, limit, offset)
     if db_comments is None:
@@ -59,4 +59,4 @@ def delete_home_subcomment(subcomment_id: int, db: Session = Depends(get_db)):
     if db_subcomment is None:
         raise HTTPException(status_code=404, detail="Subcomment not found")
     home_comment_helper.delete_subcomment(db, db_subcomment)
-    return {"message": "Subcomment deleted successfully"}
+    return {"successful": "Subcomment deleted successfully"}
