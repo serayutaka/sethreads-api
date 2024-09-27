@@ -768,7 +768,7 @@ def test_read_home_thread_with_comment():
         "body": "<p>This is body</p>",
         "is_highlight": False,
         "create_at": "2021-09-01 12:00:00",
-        
+        "create_by": "66011192",
         "comments": [
             {
                 "comment_from": 1,
