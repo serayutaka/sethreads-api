@@ -4,9 +4,13 @@ from ..schemas import CommentCreate, SubCommentCreate, CommentUpdate
 from .. import models
 
 def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
+    check_thread = db.query(models.Threads).filter(models.Threads.id == thread_id).count()
+    if check_thread == 0:
+        return None
+    
     count = db.query(models.Comments).filter(models.Comments.comment_from == thread_id).count()
     if count == 0:
-        return None
+        return []
     return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).limit(limit).offset(offset).all()
 
 def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpdate):
