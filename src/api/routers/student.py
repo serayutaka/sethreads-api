@@ -24,7 +24,3 @@ def read_ta_courses(course_id: str, db: Session = Depends(get_db)):
     if db_ta_course is None:
         raise HTTPException(status_code=404, detail="Course not found")
     return db_ta_course
-
-# @router.put("/update-info", response_model=Student)
-# def update_student(student: Student, db: Session = Depends(get_db)):
-#     return student_helper.update(db, student)

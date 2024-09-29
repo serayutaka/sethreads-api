@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Response
 from sqlalchemy.orm import Session
 
 from ...common import get_db
@@ -42,6 +42,14 @@ def update_thread(thread_id: int, thread: ThreadUpdate, db: Session = Depends(ge
     if db_thread is None:
         raise HTTPException(status_code=404, detail="Thread not found")
     return thread_helper.update_thread(db, db_thread, thread)
+
+
+@router.put("/update-is-highlight", response_model=ThreadUpdate)
+def update_thread_highlight(thread_id: int, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return thread_helper.update_thread_highlight(db, db_thread)
 
 @router.delete("/delete-thread")
 def delete_thread(thread_id: int, db: Session = Depends(get_db)):
