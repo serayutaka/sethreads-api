@@ -9,7 +9,7 @@ class CourseCreate(CourseBase):
     pass
 
 class Course(CourseBase):
-    student_id: int
+    student_id: str
 
     forums: List['Thread'] = [] # type: ignore
     
