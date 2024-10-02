@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import APIRouter, Depends, HTTPException 
 from sqlalchemy.orm import Session
 
@@ -24,3 +25,10 @@ def read_ta_courses(course_id: str, db: Session = Depends(get_db)):
     if db_ta_course is None:
         raise HTTPException(status_code=404, detail="Course not found")
     return db_ta_course
+
+@router.get("/get-all", response_model=List[Student])
+def read_students(year: str, course_id: str, db: Session = Depends(get_db)):
+    db_students = student_helper.get_all(db, year, course_id)
+    if db_students == []:
+        raise HTTPException(status_code=404, detail="No students found")
+    return db_students

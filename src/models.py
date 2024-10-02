@@ -32,6 +32,7 @@ class Courses(Base):
     course_id = Column(String)
     name = Column(String)
     student_id = Column(String, ForeignKey("students.student_id"))
+    year = Column(Integer)
     
     registered_by = relationship("Students", back_populates="registered_courses")
     forums = relationship("Threads")
