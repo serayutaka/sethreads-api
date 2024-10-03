@@ -10,6 +10,7 @@ class CourseCreate(CourseBase):
 
 class Course(CourseBase):
     student_id: str
+    year: int
 
     forums: List['Thread'] = [] # type: ignore
     
