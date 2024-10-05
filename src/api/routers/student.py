@@ -32,3 +32,10 @@ def read_students(year: str, course_id: str, db: Session = Depends(get_db)):
     if db_students == []:
         raise HTTPException(status_code=404, detail="No students found")
     return db_students
+
+@router.put("/update-ta", response_model=Students)
+def update_ta(student_id: str, is_ta: bool, ta_course_id: str, db: Session = Depends(get_db)):
+    db_student = student_helper.update_ta(db, student_id, is_ta, ta_course_id)
+    if db_student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    return db_student
