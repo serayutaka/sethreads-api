@@ -1,4 +1,4 @@
-from .students import Student, StudentCreate, StudentBase, StudentAllAttributes
+from .students import Student, StudentCreate, StudentBase, StudentAllAttributes, Students
 from .courses import Course, CourseCreate, CourseBase
 from .threads import Thread, ThreadCreate, ThreadBase, ThreadUpdate, ThreadForStudent
 from .comments import Comment, CommentCreate, CommentUpdate, CommentForStudent, CommentForThread
@@ -8,6 +8,7 @@ from .home_comments import HomeCommentForThread, HomeCommentForStudent, HomeComm
 from .home_subcomments import HomeSubComment, HomeSubCommentCreate, HomeSubCommentUpdate, HomeSubCommentForStudent
 
 Student.model_rebuild()
+Students.model_rebuild()
 StudentAllAttributes.model_rebuild()
 Course.model_rebuild()
 Thread.model_rebuild()
