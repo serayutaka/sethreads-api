@@ -42,8 +42,8 @@ def update_ta(student_id: str, is_ta: bool, ta_course_id: str, db: Session = Dep
         return { "error": "Course not found" }
     if db_student == "First year student cannot be a TA":
         return { "error": "First year student cannot be a TA" }
-    if db_student == "TA course year is higher than student year":
-        return { "error": "TA course year is higher than student year" }
+    if db_student == "TA course year is not allowed":
+        return { "error": "TA course year is not allowed" }
     return db_student
 
 @router.post("/register-course", response_model=Union[Students, dict])
@@ -55,5 +55,18 @@ def register_course(course: CourseCreate, db: Session = Depends(get_db)):
         return { "error": "Course not found" }
     if db_student == "Course already registered":
         return { "error": "Course already registered" }
+    if db_student == "Course year is higher than student year":
+        return { "error": "First year student cannot register for this course" }
+    if db_student == "First year student cannot register for this course":
+        return { "error": "First year student cannot register for this course" }
     
+    return db_student
+
+@router.delete("/withdraw-course", response_model=Union[Students, dict])
+def withdraw_course(student_id: str, course_id: str, db: Session = Depends(get_db)):
+    db_student = student_helper.withdraw_course(db, student_id, course_id)
+    if db_student is None:
+        raise HTTPException(status_code=404, detail="Student not found")
+    if db_student == "Course not found":
+        return { "error": "Course not found" }
     return db_student

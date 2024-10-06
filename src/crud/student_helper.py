@@ -37,15 +37,15 @@ def update_ta(db: Session, student_id: str, is_ta: bool, ta_course_id: str):
         db_student.ta_course_id = None
         db.commit()
         db.refresh(db_student)
-        
+
         return db_student
 
     if ta_course_id not in courses:
         return "Course not found"
     if db_student.year == 1:
         return "First year student cannot be a TA"
-    if ta_course_id[5] > str(db_student.year):
-        return "TA course year is higher than student year"
+    if ta_course_id[5] >= str(db_student.year):
+        return "TA course year is not allowed"
 
     db_student.is_ta = is_ta
     db_student.ta_course_id = ta_course_id
@@ -62,6 +62,12 @@ def register_course(db: Session, course):
     for reg_course in db_student.registered_courses:
         if reg_course.course_id == course.course_id:
             return "Course already registered"
+        
+    if course.course_id[0:3] == "012" and course.course_id[5] > str(db_student.year):
+        return "Course year is higher than student year"
+    
+    if db_student.year == 1 and course.course_id == "01006719":
+        return "First year student cannot register for this course"
     
     create_course = models.Courses(
         course_id = course.course_id,
@@ -73,4 +79,20 @@ def register_course(db: Session, course):
     db.add(create_course)
     db.commit()
     db.refresh(create_course)
+    return db_student
+
+def withdraw_course(db: Session, student_id: str, course_id: str):
+    db_student = db.query(models.Students).filter(models.Students.student_id == student_id).first()
+    if db_student is None:
+        return None
+    if course_id not in courses:
+        return "Course not found"
+    db_course = db.query(models.Courses).filter(
+        models.Courses.course_id == course_id,
+        models.Courses.student_id == student_id
+    ).first()
+    
+    db.delete(db_course)
+    db.commit()
+    db.refresh(db_student)
     return db_student
