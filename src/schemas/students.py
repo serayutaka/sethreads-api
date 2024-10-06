@@ -18,6 +18,9 @@ class Student(StudentBase):
     class Config:
         from_attributes = True
 
+class Students(Student):
+    registered_courses: List['Course'] = [] #type: ignore
+
 class StudentAllAttributes(Student):
     registered_courses: List['Course'] = [] #type: ignore
     
