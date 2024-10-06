@@ -1,6 +1,9 @@
 from sqlalchemy.orm import Session
-
+import json
 from .. import models
+
+with open('src/courses.json') as f:
+    courses = json.load(f)
 
 def find(db: Session, student_id: str):
     return db.query(models.Students).filter(models.Students.student_id == student_id).first()
@@ -29,8 +32,45 @@ def update_ta(db: Session, student_id: str, is_ta: bool, ta_course_id: str):
     db_student = db.query(models.Students).filter(models.Students.student_id == student_id).first()
     if db_student is None:
         return None
+    if is_ta == False:
+        db_student.is_ta = False
+        db_student.ta_course_id = None
+        db.commit()
+        db.refresh(db_student)
+        
+        return db_student
+
+    if ta_course_id not in courses:
+        return "Course not found"
+    if db_student.year == 1:
+        return "First year student cannot be a TA"
+    if ta_course_id[5] > str(db_student.year):
+        return "TA course year is higher than student year"
+
     db_student.is_ta = is_ta
     db_student.ta_course_id = ta_course_id
     db.commit()
     db.refresh(db_student)
+    return db_student
+
+def register_course(db: Session, course):
+    db_student = db.query(models.Students).filter(models.Students.student_id == course.student_id).first()
+    if db_student is None:
+        return None
+    if course.course_id not in courses:
+        return "Course not found"
+    for reg_course in db_student.registered_courses:
+        if reg_course.course_id == course.course_id:
+            return "Course already registered"
+    
+    create_course = models.Courses(
+        course_id = course.course_id,
+        name = courses[course.course_id],
+        student_id = course.student_id,
+        year = course.year
+    )
+    
+    db.add(create_course)
+    db.commit()
+    db.refresh(create_course)
     return db_student
