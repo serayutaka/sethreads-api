@@ -5,8 +5,10 @@ class CourseBase(BaseModel):
     course_id: str
     name: str
 
-class CourseCreate(CourseBase):
-    pass
+class CourseCreate(BaseModel):
+    course_id: str
+    student_id: str
+    year: int
 
 class Course(CourseBase):
     student_id: str
