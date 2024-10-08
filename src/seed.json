@@ -581,7 +581,7 @@
             {
                 "student_id": "admin",
                 "name": "ADMIN",
-                "surname": "ADMIN",
+                "surname": "",
                 "year": 0
             }
         ]
@@ -3794,70 +3794,208 @@
                 "year": 2
             },
             {
-                "name": "INTRODUCTION TO CALCULAS",
+                "name": "INTRODUCTION TO CALCULUS",
                 "course_id": "01006710",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
                 "course_id": "01286111",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
-                "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
                 "name": "COMPUTER PROGRAMMING",
                 "course_id": "01286121",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
                 "name": "DIGITAL CITIZEN",
                 "course_id": "96641007",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
                 "course_id": "96642170",
                 "student_id": "admin",
-                "year": 1
+                "year": 0
             },
             {
-                "name": "PROBABILITY AND STATISTICS",
+                "name": "INTERCULTURAL COMMUNICATION SKILLS IN ENGLISH 1",
+                "course_id": "96641009",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "DESIGN THINKING",
+                "course_id": "96642012",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "CREATIVE THINKING AND INNOVATION",
+                "course_id": "96642015",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "BIOTECHNOLOGY FOR BETTER LIVING",
+                "course_id": "96642051",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "FILM APPRECIATION",
+                "course_id": "96642083",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "ASIAN STUDY",
+                "course_id": "96642091",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "YOUTUBER",
+                "course_id": "96642102",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "FUN WITH AI",
+                "course_id": "96642112",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "SMART FARMING",
+                "course_id": "96642114",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "MEDITATION FOR LIFE DEVELOPMENT",
+                "course_id": "96642138",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "IMAGINATIVE ART",
+                "course_id": "96642149",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "READY TO WORK",
+                "course_id": "96642162",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "MODERN MANAGEMENT AND LEADERSHIP",
+                "course_id": "96643006",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "SCIENCE OF NEGOTIATION",
+                "course_id": "96643008",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "FUN WITH ONLINE BUSINESS",
+                "course_id": "96643016",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "MODERN ENTREPRENEURS",
+                "course_id": "96643021",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "INVESTMENT PLANNING",
+                "course_id": "96643026",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "DIGITAL ECONOMY",
+                "course_id": "96643029",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "CROSS CULTURAL COMMUNICATION",
+                "course_id": "96644037",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "BEST SPEECH",
+                "course_id": "96644044",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "CHINESE FOR COMMUNICATION",
+                "course_id": "96644057",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "JAPANESE FOR TRAVEL",
+                "course_id": "96644063",
+                "student_id": "admin",
+                "year": 0
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS 1",
                 "course_id": "01006719",
                 "student_id": "admin",
-                "year": 2
+                "year": 0
             },
             {
                 "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
                 "course_id": "01286213",
                 "student_id": "admin",
-                "year": 2
+                "year": 0
             },
             {
                 "name": "DATA STRUCTURES AND ALGORITHMS",
                 "course_id": "01286222",
                 "student_id": "admin",
-                "year": 2
+                "year": 0
             },
             {
                 "name": "WEB PROGRAMMING",
                 "course_id": "01286233",
                 "student_id": "admin",
-                "year": 2
+                "year": 0
             },
             {
                 "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
                 "course_id": "96644042",
                 "student_id": "admin",
-                "year": 2
+                "year": 0
+            },
+            {
+                "name": "FROM EXCEL TO EXCELLENT",
+                "course_id": "96642120",
+                "student_id": "admin",
+                "year": 0
             }
         ]
     }
