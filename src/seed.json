@@ -580,9 +580,9 @@
             },
             {
                 "student_id": "admin",
-                "name": "ADMIN",
+                "name": "",
                 "surname": "ADMIN",
-                "year": 0
+                "year": -1
             }
         ]
     },
