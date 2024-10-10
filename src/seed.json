@@ -579,6 +579,12 @@
                 "year": 2
             },
             {
+                "student_id": "",
+                "name": " ",
+                "surname": "",
+                "year": 2
+            },
+            {
                 "student_id": "admin",
                 "name": "",
                 "surname": "ADMIN",
@@ -3794,40 +3800,70 @@
                 "year": 2
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
             },
             {
                 "name": "CIRCUITS AND ELECTRONICS",
                 "course_id": "01286111",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
             },
             {
                 "name": "COMPUTER PROGRAMMING",
                 "course_id": "01286121",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
             },
             {
                 "name": "DIGITAL CITIZEN",
                 "course_id": "96641007",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
             },
             {
                 "name": "INTRODUCTION TO LOGIC",
                 "course_id": "96642170",
                 "student_id": "admin",
-                "year": 0
+                "year": 1
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "admin",
+                "year": 2
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "admin",
+                "year": 2
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "admin",
+                "year": 2
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "admin",
+                "year": 2
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "admin",
+                "year": 2
             },
             {
                 "name": "INTERCULTURAL COMMUNICATION SKILLS IN ENGLISH 1",
@@ -3958,36 +3994,6 @@
             {
                 "name": "JAPANESE FOR TRAVEL",
                 "course_id": "96644063",
-                "student_id": "admin",
-                "year": 0
-            },
-            {
-                "name": "PROBABILITY AND STATISTICS 1",
-                "course_id": "01006719",
-                "student_id": "admin",
-                "year": 0
-            },
-            {
-                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
-                "course_id": "01286213",
-                "student_id": "admin",
-                "year": 0
-            },
-            {
-                "name": "DATA STRUCTURES AND ALGORITHMS",
-                "course_id": "01286222",
-                "student_id": "admin",
-                "year": 0
-            },
-            {
-                "name": "WEB PROGRAMMING",
-                "course_id": "01286233",
-                "student_id": "admin",
-                "year": 0
-            },
-            {
-                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
-                "course_id": "96644042",
                 "student_id": "admin",
                 "year": 0
             },
