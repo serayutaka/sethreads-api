@@ -34,6 +34,12 @@ def update_thread(db: Session, db_thread: models.HomeThreads, thread: HomeThread
     db.refresh(db_thread)
     return db_thread
 
+def update_thread_highlight(db: Session, db_thread: models.HomeThreads):
+    db_thread.is_highlight = not db_thread.is_highlight
+    db.commit()
+    db.refresh(db_thread)
+    return db_thread
+
 def delete_thread(db: Session, thread: models.HomeThreads):
     db.delete(thread)
     db.commit()

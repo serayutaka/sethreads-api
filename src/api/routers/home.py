@@ -43,6 +43,13 @@ def update_home_thread(thread_id: int, thread: HomeThreadUpdate, db: Session = D
         raise HTTPException(status_code=404, detail="Thread not found")
     return home_helper.update_thread(db, db_thread, thread)
 
+@router.put("/update-is-highlight", response_model=HomeThreadUpdate)
+def update_home_thread_highlight(thread_id: int, db: Session = Depends(get_db)):
+    db_thread = home_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return home_helper.update_thread_highlight(db, db_thread)
+
 @router.delete("/delete-thread")
 def delete_home_thread(thread_id: int, db: Session = Depends(get_db)):
     db_thread = home_helper.find_thread(db, thread_id)
