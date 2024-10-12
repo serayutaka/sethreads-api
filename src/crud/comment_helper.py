@@ -13,6 +13,17 @@ def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
         return []
     return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).limit(limit).offset(offset).all()
 
+def find_last_comment(db: Session, thread_id: int):
+    check_thread = db.query(models.Threads).filter(models.Threads.id == thread_id).count()
+    if check_thread == 0:
+        return None
+
+    count = db.query(models.Comments).filter(models.Comments.comment_from == thread_id).count()
+    if count == 0:
+        return None
+    
+    return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).order_by(models.Comments.id.desc()).first()
+
 def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpdate):
     db_comment.comment_data = comment.comment_data
     db_comment.create_at = comment.create_at
