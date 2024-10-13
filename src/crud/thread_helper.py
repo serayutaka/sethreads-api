@@ -52,6 +52,10 @@ def update_thread(db: Session, db_thread: models.Threads, thread: ThreadUpdate):
     return db_thread
 
 def delete_thread(db: Session, thread: models.Threads):
+    db_comment_of_thread = db.query(models.Comments).filter(models.Comments.comment_from == thread.id)
+    for comment in db_comment_of_thread:
+        db.query(models.SubComments).filter(models.SubComments.reply_of == comment.id).delete()
+    db_comment_of_thread.delete()
     db.delete(thread)
     db.commit()
 

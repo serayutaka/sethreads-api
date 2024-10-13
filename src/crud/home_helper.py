@@ -41,5 +41,9 @@ def update_thread_highlight(db: Session, db_thread: models.HomeThreads):
     return db_thread
 
 def delete_thread(db: Session, thread: models.HomeThreads):
+    db_comment_of_thread = db.query(models.HomeComments).filter(models.HomeComments.comment_from == thread.id)
+    for comment in db_comment_of_thread:
+        db.query(models.HomeSubComments).filter(models.HomeSubComments.reply_of == comment.id).delete()
+    db_comment_of_thread.delete()
     db.delete(thread)
     db.commit()
