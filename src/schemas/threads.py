@@ -28,6 +28,7 @@ class Thread(ThreadBase):
     title: str
     body: str
     is_highlight: bool | None = False
+    likes: int
     create_at: str
 
     comments: List['CommentForThread'] = None # type: ignore

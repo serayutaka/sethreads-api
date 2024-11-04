@@ -46,6 +46,7 @@ class Threads(Base):
     title = Column(String)
     body = Column(String)
     is_highlight = Column(Boolean)
+    likes = Column(Integer)
     create_at = Column(String)
     
     comments = relationship("Comments")
@@ -74,9 +75,6 @@ class SubComments(Base):
     
     author = relationship("Students", back_populates="reply")
 
-
-
-
 class HomeThreads(Base):
     __tablename__ = "home"
 
@@ -85,6 +83,7 @@ class HomeThreads(Base):
     title = Column(String)
     body = Column(String)
     is_highlight = Column(Boolean)
+    likes = Column(Integer)
     create_at = Column(String)
 
     comments = relationship("HomeComments")

@@ -28,6 +28,7 @@ class HomeThread(HomeThreadBase):
     title: str
     body: str
     is_highlight: bool | None = False
+    likes: int
     create_at: str
 
     comments: List['HomeCommentForThread'] = None # type: ignore

@@ -50,6 +50,13 @@ def update_home_thread_highlight(thread_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Thread not found")
     return home_helper.update_thread_highlight(db, db_thread)
 
+@router.put("/update-likes")
+def update_home_thread_likes(thread_id: int, is_like: bool, db: Session = Depends(get_db)):
+    db_thread = home_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return home_helper.update_thread_likes(db, is_like, db_thread).likes
+
 @router.delete("/delete-thread")
 def delete_home_thread(thread_id: int, db: Session = Depends(get_db)):
     db_thread = home_helper.find_thread(db, thread_id)

@@ -18,6 +18,7 @@ def create_thread(db: Session, thread: HomeThreadCreate):
         title = thread.title,
         body = thread.body,
         is_highlight = thread.is_highlight,
+        likes = 0,
         create_at = thread.create_at
     )
     db.add(db_thread)
@@ -36,6 +37,16 @@ def update_thread(db: Session, db_thread: models.HomeThreads, thread: HomeThread
 
 def update_thread_highlight(db: Session, db_thread: models.HomeThreads):
     db_thread.is_highlight = not db_thread.is_highlight
+    db.commit()
+    db.refresh(db_thread)
+    return db_thread
+
+def update_thread_likes(db: Session, is_like: bool, db_thread: models.HomeThreads):
+    if is_like:
+        db_thread.likes += 1
+    else:
+        if db_thread.likes > 0:
+            db_thread.likes -= 1
     db.commit()
     db.refresh(db_thread)
     return db_thread

@@ -35,6 +35,7 @@ def create_thread(db: Session, thread: ThreadCreate):
         title = thread.title,
         body = thread.body,
         is_highlight = thread.is_highlight,
+        likes = 0,
         create_at = thread.create_at
     )
     db.add(db_thread)

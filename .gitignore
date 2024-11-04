@@ -161,4 +161,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 *.db
-alembic/versions/90cf6e3e02cd_initial_migration.py
+alembic/*
