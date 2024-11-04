@@ -1,6 +1,7 @@
 from .students import Student, StudentCreate, StudentBase, StudentAllAttributes, Students
 from .courses import Course, CourseCreate, CourseBase
 from .threads import Thread, ThreadCreate, ThreadBase, ThreadUpdate, ThreadForStudent
+from .thread_liked import ThreadLikedBase
 from .comments import Comment, CommentCreate, CommentUpdate, CommentForStudent, CommentForThread
 from .subcomments import SubComment, SubCommentCreate, SubCommentUpdate, SubCommentForStudent
 from .home_threads import HomeThread, HomeThreadCreate, HomeThreadBase, HomeThreadUpdate, HomeThreadForStudent

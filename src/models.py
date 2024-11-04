@@ -18,6 +18,7 @@ class Students(Base):
     registered_courses = relationship("Courses", back_populates="registered_by")
 
     posted = relationship("Threads", back_populates="author")
+    liked = relationship("ThreadsLikes")
     comment = relationship("Comments", back_populates="author")
     reply = relationship("SubComments", back_populates="author")
 
@@ -51,6 +52,13 @@ class Threads(Base):
     
     comments = relationship("Comments")
     author = relationship("Students", back_populates="posted")
+
+class ThreadsLikes(Base):
+    __tablename__ = "threads_likes"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    thread_id = Column(Integer, ForeignKey("threads.id"))
+    student_id = Column(String, ForeignKey("students.student_id"))
 
 class Comments(Base):
     __tablename__ = "comments"

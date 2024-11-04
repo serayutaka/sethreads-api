@@ -27,6 +27,14 @@ def find_thread(db: Session, thread_id: int, course_id: str = None):
         return None
     return db.query(models.Threads).filter(models.Threads.id == thread_id).first()
 
+def find_student_liked_thread(db: Session, thread_id: int, student_id: str):
+    return db.query(models.ThreadsLikes).filter(
+        and_(
+            models.ThreadsLikes.thread_id == thread_id,
+            models.ThreadsLikes.student_id == student_id
+        )
+    )
+
 def create_thread(db: Session, thread: ThreadCreate):
 
     db_thread = models.Threads(
@@ -62,6 +70,22 @@ def delete_thread(db: Session, thread: models.Threads):
 
 def update_thread_highlight(db: Session, db_thread: models.Threads):
     db_thread.is_highlight = not db_thread.is_highlight
+    db.commit()
+    db.refresh(db_thread)
+    return db_thread
+
+def update_thread_likes(db: Session, is_like: bool, student_id: str, db_thread: models.Threads, db_thread_like: models.ThreadsLikes):
+    if is_like:
+        student_liked = models.ThreadsLikes(
+            thread_id = db_thread.id,
+            student_id = student_id
+        )
+        db.add(student_liked)
+        db_thread.likes += 1
+    else:
+        if db_thread.likes > 0:
+            db_thread.likes -= 1
+            db_thread_like.delete()
     db.commit()
     db.refresh(db_thread)
     return db_thread
