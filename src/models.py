@@ -51,6 +51,7 @@ class Threads(Base):
     likes = Column(Integer)
     create_at = Column(String)
     
+    liked_by = relationship("ThreadsLikes")
     comments = relationship("Comments")
     author = relationship("Students", back_populates="posted")
 
@@ -94,7 +95,8 @@ class HomeThreads(Base):
     is_highlight = Column(Boolean)
     likes = Column(Integer)
     create_at = Column(String)
-
+    
+    liked_by = relationship("HomeThreadsLike")
     comments = relationship("HomeComments")
     author = relationship("Students")
 
@@ -102,7 +104,7 @@ class HomeThreadsLike(Base):
     __tablename__ = "home_likes"
     
     id = Column(Integer, primary_key=True, autoincrement=True)
-    thread_id = Column(Integer, ForeignKey("threads.id"))
+    thread_id = Column(Integer, ForeignKey("home.id"))
     student_id = Column(String, ForeignKey("students.student_id"))
 
 class HomeComments(Base):

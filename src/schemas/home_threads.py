@@ -31,6 +31,7 @@ class HomeThread(HomeThreadBase):
     likes: int
     create_at: str
 
+    liked_by: List['HomeThreadLikedBase'] = None # type: ignore
     comments: List['HomeCommentForThread'] = None # type: ignore
     author: Optional['Student'] = None # type: ignore
 
