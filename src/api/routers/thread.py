@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Response
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from ...common import get_db
@@ -50,17 +51,22 @@ def update_thread_highlight(thread_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Thread not found")
     return thread_helper.update_thread_highlight(db, db_thread)
 
+class LikeThreads(BaseModel):
+    thread_id: int
+    student_id: str
+    is_like: bool
+
 @router.put("/update-likes")
-def update_thread_likes(thread_id: int, student_id: str, is_like: bool, db: Session = Depends(get_db)):
-    db_thread = thread_helper.find_thread(db, thread_id)
-    db_thread_like = thread_helper.find_student_liked_thread(db, thread_id, student_id)
+def update_thread_likes(likeThreads: LikeThreads, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, likeThreads.thread_id)
+    db_thread_like = thread_helper.find_student_liked_thread(db, likeThreads.thread_id, likeThreads.student_id)
     if db_thread is None:
         raise HTTPException(status_code=404, detail="Thread not found")
-    elif db_thread_like.first() is None and is_like == False:
+    elif db_thread_like.first() is None and likeThreads.is_like == False:
         raise HTTPException(status_code=403, detail="Forbidden")
-    elif db_thread_like.first() is not None and is_like == True:
+    elif db_thread_like.first() is not None and likeThreads.is_like == True:
         raise HTTPException(status_code=403, detail="Forbidden")
-    return thread_helper.update_thread_likes(db, is_like, student_id, db_thread, db_thread_like).likes
+    return thread_helper.update_thread_likes(db, likeThreads.is_like, likeThreads.student_id, db_thread, db_thread_like).likes
 
 @router.delete("/delete-thread")
 def delete_thread(thread_id: int, db: Session = Depends(get_db)):
