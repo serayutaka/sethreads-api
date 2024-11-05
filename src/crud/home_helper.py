@@ -2,6 +2,7 @@ from ..schemas import HomeThread, HomeThreadCreate, HomeThreadUpdate
 from .. import models
 
 from sqlalchemy.orm import Session
+from sqlalchemy import and_
 
 def find_all(db: Session, limit: int, offset: int):
     count = db.query(models.HomeThreads).count()
@@ -11,6 +12,14 @@ def find_all(db: Session, limit: int, offset: int):
 
 def find_thread(db: Session, thread_id: int):
     return db.query(models.HomeThreads).filter(models.HomeThreads.id == thread_id).first()
+
+def find_student_liked_thread(db: Session, thread_id: int, student_id: str):
+    return db.query(models.HomeThreadsLike).filter(
+        and_(
+            models.HomeThreadsLike.thread_id == thread_id,
+            models.HomeThreadsLike.student_id == student_id
+        )
+    )
 
 def create_thread(db: Session, thread: HomeThreadCreate):
     db_thread = models.HomeThreads(
@@ -41,12 +50,18 @@ def update_thread_highlight(db: Session, db_thread: models.HomeThreads):
     db.refresh(db_thread)
     return db_thread
 
-def update_thread_likes(db: Session, is_like: bool, db_thread: models.HomeThreads):
+def update_thread_likes(db: Session, student_id: str, is_like: bool, db_thread: models.HomeThreads, db_thread_like: models.HomeThreadsLike):
     if is_like:
+        student_liked = models.HomeThreadsLike(
+            thread_id = db_thread.id,
+            student_id = student_id
+        )
+        db.add(student_liked)
         db_thread.likes += 1
     else:
         if db_thread.likes > 0:
             db_thread.likes -= 1
+            db_thread_like.delete()
     db.commit()
     db.refresh(db_thread)
     return db_thread

@@ -5,6 +5,7 @@ from .thread_liked import ThreadLikedBase
 from .comments import Comment, CommentCreate, CommentUpdate, CommentForStudent, CommentForThread
 from .subcomments import SubComment, SubCommentCreate, SubCommentUpdate, SubCommentForStudent
 from .home_threads import HomeThread, HomeThreadCreate, HomeThreadBase, HomeThreadUpdate, HomeThreadForStudent
+from .homethread_liked import HomeThreadLikedBase
 from .home_comments import HomeCommentForThread, HomeCommentForStudent, HomeComment, HomeCommentCreate, HomeCommentUpdate
 from .home_subcomments import HomeSubComment, HomeSubCommentCreate, HomeSubCommentUpdate, HomeSubCommentForStudent
 

@@ -18,10 +18,11 @@ class Students(Base):
     registered_courses = relationship("Courses", back_populates="registered_by")
 
     posted = relationship("Threads", back_populates="author")
-    liked = relationship("ThreadsLikes")
+    likedThreads = relationship("ThreadsLikes")
     comment = relationship("Comments", back_populates="author")
     reply = relationship("SubComments", back_populates="author")
 
+    likedHomeThreads = relationship("HomeThreadsLike")
     posted_public = relationship("HomeThreads", back_populates="author")
     comment_public = relationship("HomeComments", back_populates="author")
     reply_public = relationship("HomeSubComments", back_populates="author")
@@ -96,6 +97,13 @@ class HomeThreads(Base):
 
     comments = relationship("HomeComments")
     author = relationship("Students")
+
+class HomeThreadsLike(Base):
+    __tablename__ = "home_likes"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    thread_id = Column(Integer, ForeignKey("threads.id"))
+    student_id = Column(String, ForeignKey("students.student_id"))
 
 class HomeComments(Base):
     __tablename__ = "home_comments"

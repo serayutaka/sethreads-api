@@ -60,7 +60,7 @@ def update_thread_likes(thread_id: int, student_id: str, is_like: bool, db: Sess
         raise HTTPException(status_code=403, detail="Forbidden")
     elif db_thread_like.first() is not None and is_like == True:
         raise HTTPException(status_code=403, detail="Forbidden")
-    return thread_helper.update_thread_likes(db, is_like, student_id, db_thread, db_thread_like)
+    return thread_helper.update_thread_likes(db, is_like, student_id, db_thread, db_thread_like).likes
 
 @router.delete("/delete-thread")
 def delete_thread(thread_id: int, db: Session = Depends(get_db)):

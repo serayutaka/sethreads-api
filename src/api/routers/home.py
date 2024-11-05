@@ -51,11 +51,16 @@ def update_home_thread_highlight(thread_id: int, db: Session = Depends(get_db)):
     return home_helper.update_thread_highlight(db, db_thread)
 
 @router.put("/update-likes")
-def update_home_thread_likes(thread_id: int, is_like: bool, db: Session = Depends(get_db)):
+def update_home_thread_likes(thread_id: int, student_id: str, is_like: bool, db: Session = Depends(get_db)):
     db_thread = home_helper.find_thread(db, thread_id)
+    db_thread_like = home_helper.find_student_liked_thread(db, thread_id, student_id)
     if db_thread is None:
         raise HTTPException(status_code=404, detail="Thread not found")
-    return home_helper.update_thread_likes(db, is_like, db_thread).likes
+    elif db_thread_like.first() is None and is_like == False:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    elif db_thread_like.first() is not None and is_like == True:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    return home_helper.update_thread_likes(db, student_id, is_like, db_thread, db_thread_like).likes
 
 @router.delete("/delete-thread")
 def delete_home_thread(thread_id: int, db: Session = Depends(get_db)):
