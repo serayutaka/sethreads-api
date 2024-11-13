@@ -32,14 +32,14 @@ def read_home_thread(thread_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_thread
 
-@router.post("/upload-file")
+@router.post("/upload-files")
 async def create_upload_file(files: List[UploadFile]):
     result = await home_helper.save_files(files, UPLOAD_DIRICTORY)
     if (result != True):
         raise HTTPException(status_code=500, detail="Failed to save file")
     return {"message": "File uploaded successfully"}
 
-@router.get("/download-file", response_class=FileResponse)
+@router.get("/get-file", response_class=FileResponse)
 def download_file(file_name: str, key: str):
     file_path = UPLOAD_DIRICTORY / file_name
     if not file_path.exists:
