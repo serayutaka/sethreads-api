@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-
 from typing import List, Optional
 
 class ThreadBase(BaseModel):
@@ -11,6 +10,7 @@ class ThreadCreate(ThreadBase):
     body: str
     is_highlight: bool | None = False
     create_at: str
+    files_name: List[str] = None
 
 class ThreadUpdate(BaseModel):
     title: str

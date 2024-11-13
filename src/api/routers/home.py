@@ -40,7 +40,8 @@ async def create_upload_file(files: List[UploadFile]):
     return {"message": "File uploaded successfully"}
 
 @router.get("/get-file", response_class=FileResponse)
-def download_file(file_name: str, key: str):
+def download_file(file_name: str, thread_id: str):
+    file_name = f"homeID_{thread_id}-{file_name}"
     file_path = UPLOAD_DIRICTORY / file_name
     if not file_path.exists:
         raise HTTPException(status_code=404, detail="File not found")

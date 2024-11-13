@@ -3,9 +3,11 @@ from typing import List
 from pathlib import Path
 from ..schemas import HomeThread, HomeThreadCreate, HomeThreadUpdate
 from .. import models
+import os
 
 from sqlalchemy.orm import Session
 from sqlalchemy import and_
+from config.settings import UPLOAD_DIRICTORY
 
 def find_all(db: Session, limit: int, offset: int):
     count = db.query(models.HomeThreads).count()
@@ -102,5 +104,14 @@ def delete_thread(db: Session, thread: models.HomeThreads):
     for comment in db_comment_of_thread:
         db.query(models.HomeSubComments).filter(models.HomeSubComments.reply_of == comment.id).delete()
     db_comment_of_thread.delete()
+
+    db.query(models.HomeThreadsLike).filter(models.HomeThreadsLike.thread_id == thread.id).delete()
+
+    db_files = db.query(models.HomeThreadsFiles).filter(models.HomeThreadsFiles.thread_id == thread.id)
+    for file in db_files:
+        filename = f"homeID_{thread.id}-{file.file_name}"
+        os.remove(UPLOAD_DIRICTORY / filename)
+
+    db_files.delete()
     db.delete(thread)
     db.commit()

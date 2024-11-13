@@ -1,8 +1,10 @@
 from ..schemas import Thread, ThreadCreate, ThreadBase, ThreadUpdate, Course
 from .. import models
+import os
 
 from sqlalchemy.orm import Session
 from sqlalchemy import and_
+from config.settings import UPLOAD_DIRICTORY
 
 def find_by_course_id(db: Session, course_id: str, limit: int, offset: int):
     is_valid_course_id = db.query(models.Courses).filter(models.Courses.course_id == course_id).count()
@@ -49,7 +51,34 @@ def create_thread(db: Session, thread: ThreadCreate):
     db.add(db_thread)
     db.commit()
     db.refresh(db_thread)
+
+    if thread.files_name:
+        for file_name in thread.files_name:
+            create_thread_file(db, db_thread.id, file_name)
+
     return db_thread
+
+def create_thread_file(db: Session, thread_id: int, file_name: str):
+    db_thread_file = models.ThreadsFiles(
+        thread_id = thread_id,
+        file_name = file_name
+    )
+    db.add(db_thread_file)
+    db.commit()
+    db.refresh(db_thread_file)
+    return db_thread_file
+
+async def save_files(files: list, save_path: str):
+    for file in files:
+        file_path = os.path.join(save_path, file.filename)
+        try:
+            with open(file_path, "wb") as buffer:
+                buffer.write(file.file.read())
+        except Exception as e:
+            return e
+        finally:
+            file.file.close()
+    return True
 
 def update_thread(db: Session, db_thread: models.Threads, thread: ThreadUpdate):
     db_thread.title = thread.title
@@ -65,6 +94,14 @@ def delete_thread(db: Session, thread: models.Threads):
     for comment in db_comment_of_thread:
         db.query(models.SubComments).filter(models.SubComments.reply_of == comment.id).delete()
     db_comment_of_thread.delete()
+    db.query(models.ThreadsLikes).filter(models.ThreadsLikes.thread_id == thread.id).delete()
+    
+    db_files = db.query(models.ThreadsFiles).filter(models.ThreadsFiles.thread_id == thread.id)
+    for file in db_files:
+        filename = f"threadID_{thread.id}-{file.file_name}"
+        os.remove(UPLOAD_DIRICTORY / filename)
+
+    db_files.delete()
     db.delete(thread)
     db.commit()
 

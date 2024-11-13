@@ -1,10 +1,14 @@
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, UploadFile
+from fastapi.responses import FileResponse
+from typing import List
 from pydantic import BaseModel
+import mimetypes
 from sqlalchemy.orm import Session
 
 from ...common import get_db
 from ...crud import thread_helper
 from ...schemas import Thread, ThreadCreate, ThreadUpdate
+from config.settings import UPLOAD_DIRICTORY
 
 router = APIRouter(
     prefix="/thread",
@@ -27,6 +31,25 @@ def read_thread(thread_id: int, course_id: str, db: Session = Depends(get_db)):
     if db_thread is None:
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_thread
+
+@router.post("/upload-files")
+async def create_upload_file(files: List[UploadFile]):
+    result = await thread_helper.save_files(files, UPLOAD_DIRICTORY)
+    if (result != True):
+        raise HTTPException(status_code=500, detail="Failed to save file")
+    return {"message": "File uploaded successfully"}
+
+@router.get("/get-file", response_class=FileResponse)
+def download_file(file_name: str, thread_id: str):
+    file_name = f"threadID_{thread_id}-{file_name}"
+    file_path = UPLOAD_DIRICTORY / file_name
+    if not file_path.exists:
+        raise HTTPException(status_code=404, detail="File not found")
+    
+    media_type, _ = mimetypes.guess_type(str(file_path))
+    if media_type is None:
+        media_type = "application/octet-stream"
+    return FileResponse(path=file_path, media_type=media_type, filename=file_name)
 
 @router.post("/create-thread", response_model=Thread, status_code=201)
 def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
