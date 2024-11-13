@@ -8,6 +8,7 @@ from .home_threads import HomeThread, HomeThreadCreate, HomeThreadBase, HomeThre
 from .homethread_liked import HomeThreadLikedBase
 from .home_comments import HomeCommentForThread, HomeCommentForStudent, HomeComment, HomeCommentCreate, HomeCommentUpdate
 from .home_subcomments import HomeSubComment, HomeSubCommentCreate, HomeSubCommentUpdate, HomeSubCommentForStudent
+from .files import HomeThreadsFiles, ThreadsFiles
 
 Student.model_rebuild()
 Students.model_rebuild()

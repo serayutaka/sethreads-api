@@ -51,6 +51,7 @@ class Threads(Base):
     likes = Column(Integer)
     create_at = Column(String)
     
+    files = relationship("ThreadsFiles")
     liked_by = relationship("ThreadsLikes")
     comments = relationship("Comments")
     author = relationship("Students", back_populates="posted")
@@ -61,6 +62,12 @@ class ThreadsLikes(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     thread_id = Column(Integer, ForeignKey("threads.id"))
     student_id = Column(String, ForeignKey("students.student_id"))
+
+class ThreadsFiles(Base):
+    __tablename__ = "threads_files"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    thread_id = Column(Integer, ForeignKey("threads.id"))
+    file_name = Column(String)
 
 class Comments(Base):
     __tablename__ = "comments"
@@ -96,6 +103,7 @@ class HomeThreads(Base):
     likes = Column(Integer)
     create_at = Column(String)
     
+    files = relationship("HomeThreadsFiles")
     liked_by = relationship("HomeThreadsLike")
     comments = relationship("HomeComments")
     author = relationship("Students")
@@ -106,6 +114,13 @@ class HomeThreadsLike(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     thread_id = Column(Integer, ForeignKey("home.id"))
     student_id = Column(String, ForeignKey("students.student_id"))
+
+class HomeThreadsFiles(Base):
+    __tablename__ = "home_files"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    thread_id = Column(Integer, ForeignKey("home.id"))
+    file_name = Column(String)
 
 class HomeComments(Base):
     __tablename__ = "home_comments"

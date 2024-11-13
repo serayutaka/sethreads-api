@@ -1,3 +1,6 @@
+from fastapi import UploadFile
+from typing import List
+from pathlib import Path
 from ..schemas import HomeThread, HomeThreadCreate, HomeThreadUpdate
 from .. import models
 
@@ -33,7 +36,35 @@ def create_thread(db: Session, thread: HomeThreadCreate):
     db.add(db_thread)
     db.commit()
     db.refresh(db_thread)
+
+    if thread.files_name:
+        for file_name in thread.files_name:
+            create_home_thread_file(db, db_thread.id, file_name)
+    
     return db_thread
+
+def create_home_thread_file(db: Session, thread_id: int, file_name: str):
+    db_thread_file = models.HomeThreadsFiles(
+        thread_id = thread_id,
+        file_name = file_name
+    )
+    db.add(db_thread_file)
+    db.commit()
+    db.refresh(db_thread_file)
+    return db_thread_file
+
+async def save_files(files: List[UploadFile], save_path: Path):
+    for file in files:
+        file_path = save_path / file.filename
+        try:
+            with file_path.open("wb") as buffer:
+                buffer.write(file.file.read())
+        except Exception as e:
+            return e
+        finally:
+            file.file.close()
+    return True
+        
 
 def update_thread(db: Session, db_thread: models.HomeThreads, thread: HomeThreadUpdate):
     db_thread.title = thread.title

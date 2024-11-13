@@ -31,6 +31,7 @@ class Thread(ThreadBase):
     likes: int
     create_at: str
 
+    files: List['ThreadsFiles'] = None # type: ignore
     liked_by: List['ThreadLikedBase'] = None # type: ignore
     comments: List['CommentForThread'] = None # type: ignore
     author: Optional['Student'] = None # type: ignore

@@ -11,6 +11,7 @@ class HomeThreadCreate(HomeThreadBase):
     is_highlight: bool | None = False
     create_at: str
     create_by: str
+    files_name: List[str] = None
 
 class HomeThreadUpdate(BaseModel):
     title: str
@@ -31,6 +32,7 @@ class HomeThread(HomeThreadBase):
     likes: int
     create_at: str
 
+    files: List['HomeThreadsFiles'] = None # type: ignore
     liked_by: List['HomeThreadLikedBase'] = None # type: ignore
     comments: List['HomeCommentForThread'] = None # type: ignore
     author: Optional['Student'] = None # type: ignore
