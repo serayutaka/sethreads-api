@@ -4,12 +4,15 @@ from typing import List
 from pydantic import BaseModel
 import mimetypes
 from sqlalchemy.orm import Session
+from dotenv import load_dotenv
+from bs4 import BeautifulSoup
 
-from ...common import get_db
-from ...crud import thread_helper
+from ...common import get_db, send_emails
+from ...crud import thread_helper, student_helper
 from ...schemas import Thread, ThreadCreate, ThreadUpdate
 from config.settings import UPLOAD_DIRICTORY
 
+load_dotenv()
 router = APIRouter(
     prefix="/thread",
     tags=["thread"],
@@ -52,13 +55,30 @@ def download_file(file_name: str, thread_id: str):
     return FileResponse(path=file_path, media_type=media_type, filename=file_name)
 
 @router.post("/create-thread", response_model=Thread, status_code=201)
-def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
+async def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
     try:
         db_thread = thread_helper.create_thread(db, thread)
         db.refresh(db_thread, ["author"])
+
+        # Send email to all students in the course
+        """ This is a code where when we get domain name
+        students = student_helper.get_all(db, db_thread.course_id)
+        recipants_emails = [f"{student.student_id}@kmitl.ac.th" for student in students]
+        recipants_name = [student.name for student in students]
+        """
+
+        recipants_student_id = ["66011192"] # If having the domain, we can get all students id in the course
+        recipants_emails = [f"{student_id}@kmitl.ac.th" for student_id in recipants_student_id]
+        recipants_name = [student_helper.find(db, student_id).name for student_id in recipants_student_id]
+        recipants = dict(zip(recipants_name, recipants_emails))
+        title = BeautifulSoup(db_thread.title, "html.parser").get_text()
+        thread_url = f"http://localhost:3000/course/{db_thread.course_id}/thread/{db_thread.id}"
+        
+        await send_emails(db_thread.author.name, recipants, title, thread_url)
+
         return db_thread
     except Exception as e:
-        return e
+        print(f"Error: {e}")
 
 @router.put("/update-thread", response_model=ThreadUpdate)
 def update_thread(thread_id: int, thread: ThreadUpdate, db: Session = Depends(get_db)):
