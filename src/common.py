@@ -37,7 +37,7 @@ async def send_email(to_email: str, author: str, recipant: str, thread_title: st
             url = "https://api.mailgun.net/v3/sandbox2172160daa3b48128cb6d916fd06827d.mailgun.org/messages"
             auth = aiohttp.BasicAuth("api", api_key)
             data = {
-            "from": "Email Sender<admin@sandbox2172160daa3b48128cb6d916fd06827d.mailgun.org>",
+            "from": "noreply <bot@sandbox2172160daa3b48128cb6d916fd06827d.mailgun.org>",
             "to": to_email,
             "subject": f"Check Out the Latest Thread: {thread_title}",
             "html": html_template
