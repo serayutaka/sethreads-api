@@ -55,7 +55,7 @@ def download_file(file_name: str, thread_id: str):
     return FileResponse(path=file_path, media_type=media_type, filename=file_name)
 
 @router.post("/create-thread", response_model=Thread, status_code=201)
-async def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
+async def create_thread(thread: ThreadCreate, notify: bool, db: Session = Depends(get_db)):
     try:
         db_thread = thread_helper.create_thread(db, thread)
         db.refresh(db_thread, ["author"])
@@ -67,14 +67,15 @@ async def create_thread(thread: ThreadCreate, db: Session = Depends(get_db)):
         recipants_name = [student.name for student in students]
         """
 
-        recipants_student_id = ["66011192"] # If having the domain, we can get all students id in the course
-        recipants_emails = [f"{student_id}@kmitl.ac.th" for student_id in recipants_student_id]
-        recipants_name = [student_helper.find(db, student_id).name for student_id in recipants_student_id]
-        recipants = dict(zip(recipants_name, recipants_emails))
-        title = BeautifulSoup(db_thread.title, "html.parser").get_text()
-        thread_url = f"http://localhost:3000/course/{db_thread.course_id}/thread/{db_thread.id}"
-        
-        await send_emails(db_thread.author.name, recipants, title, thread_url)
+        if notify:
+            recipants_student_id = ["66011192"] # If having the domain, we can get all students id in the course
+            recipants_emails = [f"{student_id}@kmitl.ac.th" for student_id in recipants_student_id]
+            recipants_name = [student_helper.find(db, student_id).name for student_id in recipants_student_id]
+            recipants = dict(zip(recipants_name, recipants_emails))
+            title = BeautifulSoup(db_thread.title, "html.parser").get_text()
+            thread_url = f"http://localhost:3000/course/{db_thread.course_id}/thread/{db_thread.id}"
+            
+            await send_emails(db_thread.author.name, recipants, title, thread_url)
 
         return db_thread
     except Exception as e:

@@ -54,7 +54,7 @@ def download_file(file_name: str, thread_id: str):
     return FileResponse(path=file_path, media_type=media_type, filename=file_name)
 
 @router.post("/create-thread", response_model=HomeThread, status_code=201)
-async def create_home_thread(thread: HomeThreadCreate, db: Session = Depends(get_db)):
+async def create_home_thread(thread: HomeThreadCreate, notify: bool, db: Session = Depends(get_db)):
     try:
         db_thread = home_helper.create_thread(db, thread)
         db.refresh(db_thread, ["author"])
@@ -65,14 +65,16 @@ async def create_home_thread(thread: HomeThreadCreate, db: Session = Depends(get
         recipants_emails = [f"{student.student_id}@kmitl.ac.th" for student in students]
         recipants_name = [student.name for student in students]
         """
-        recipants_student_id = ["66011192"]
-        recipants_emails = [f"{student_id}@kmitl.ac.th" for student_id in recipants_student_id]
-        recipants_name = [student_helper.find(db, student_id).name for student_id in recipants_student_id]
-        recipants = dict(zip(recipants_name, recipants_emails))
-        title = BeautifulSoup(db_thread.title, "html.parser").get_text()
-        thread_url = f"http://localhost:3000/home/thread/{db_thread.id}"
+        
+        if notify:
+            recipants_student_id = ["66011192"]
+            recipants_emails = [f"{student_id}@kmitl.ac.th" for student_id in recipants_student_id]
+            recipants_name = [student_helper.find(db, student_id).name for student_id in recipants_student_id]
+            recipants = dict(zip(recipants_name, recipants_emails))
+            title = BeautifulSoup(db_thread.title, "html.parser").get_text()
+            thread_url = f"http://localhost:3000/home/thread/{db_thread.id}"
 
-        await send_emails(db_thread.author.name, recipants, title, thread_url)
+            await send_emails(db_thread.author.name, recipants, title, thread_url)
 
         return db_thread
     except Exception as e:
