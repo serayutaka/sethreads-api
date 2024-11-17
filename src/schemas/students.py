@@ -14,9 +14,14 @@ class Student(StudentBase):
     year: int | None
     is_ta: bool | None
     ta_course_id: str | None
-
+    likedThreads: List['ThreadLikedBase'] = [] #type: ignore
+    likedHomeThreads: List['HomeThreadLikedBase'] = [] #type: ignore
+    
     class Config:
         from_attributes = True
+
+class Students(Student):
+    registered_courses: List['Course'] = [] #type: ignore
 
 class StudentAllAttributes(Student):
     registered_courses: List['Course'] = [] #type: ignore

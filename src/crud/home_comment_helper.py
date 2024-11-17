@@ -9,6 +9,12 @@ def find_by_id(db: Session, home_id: int, limit: int, offset: int):
         return None
     return db.query(models.HomeComments).filter(models.HomeComments.comment_from == home_id).limit(limit).offset(offset).all()
 
+def find_last_comment(db: Session, home_id: int):
+    count = db.query(models.HomeComments).filter(models.HomeComments.comment_from == home_id).count()
+    if count == 0:
+        return None
+    return db.query(models.HomeComments).filter(models.HomeComments.comment_from == home_id).order_by(models.HomeComments.id.desc()).first()
+
 def update_comment(db: Session, db_comment: models.HomeComments, comment: HomeCommentUpdate):
     db_comment.comment_data = comment.comment_data
     db_comment.create_at = comment.create_at

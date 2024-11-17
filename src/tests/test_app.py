@@ -311,6 +311,16 @@ def test_update_thread_not_found():
     assert response.status_code == 404
     assert response.json() == {"detail": "Thread not found"}
 
+def test_update_thread_highlight():
+    response = client.put("api/thread/update-is-highlight?thread_id=2", json={}, headers={"x-token": get_token()})
+    assert response.status_code == 200
+    assert response.json() == {
+        "title": "<h2>This is title</h2>",
+        "body": "<p>This is body</p>",
+        "is_highlight": True,
+        "create_at": "2021-09-01 12:00:00"
+    }
+
 def test_delete_thread():
     response = client.delete("api/thread/delete-thread?thread_id=2", headers={"x-token": get_token()})
     assert response.status_code == 200

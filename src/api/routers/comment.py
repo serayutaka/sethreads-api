@@ -18,6 +18,13 @@ def read_comments_by_thread_id(thread_id: int, limit: int, offset: int, db: Sess
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_comments
 
+@router.get("/get-last-comment", response_model=Comment)
+def read_last_comment_by_thread_id(thread_id: int, db: Session = Depends(get_db)):
+    db_comment = comment_helper.find_last_comment(db, thread_id)
+    if db_comment is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return db_comment
+
 @router.put("/update-comment", response_model=Comment)
 def update_comment(comment_id: int, comment: CommentUpdate, db: Session = Depends(get_db)):
     db_comment = comment_helper.find_comment(db, comment_id)

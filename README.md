@@ -89,11 +89,14 @@ sethreads-api/
 │   │   ├── __init__.py              # Initializes the `schemas` module
 │   │   ├── comments.py              # Schema definitions for comments
 │   │   ├── courses.py               # Schema definitions for courses
+│   │   ├── files.py                 # Schema definitions for files
 │   │   ├── home_comments.py         # Schema definitions for comments on home threads
 │   │   ├── home_subcomments.py      # Schema definitions for nested comments on home threads
 │   │   ├── home_threads.py          # Schema definitions for home threads
+│   │   ├── homethread_liked.py      # Schema definitions for home thread liking
 │   │   ├── students.py              # Schema definitions for student objects
 │   │   ├── subcomments.py           # Schema definitions for nested comments
+│   │   ├── thread_liked.py          # Schema definitions for thread liking
 │   │   ├── threads.py               # Schema definitions for threads
 │   ├── tests/                       # Test suite for the application
 │   │   ├── __init__.py              # Initializes the `tests` module
@@ -109,7 +112,12 @@ sethreads-api/
 │   ├── versions/                    # Versioned migration scripts
 │   ├── README                       # Alembic tool documentation
 │   ├── env.py                       # Alembic configuration for database migrations
-│   ├── script.py.mako               # Template for creating new migration scripts
+│   └── script.py.mako               # Template for creating new migration scripts
+│
+├── config/                          # Configuration files
+│   ├── __init__.py                  # Initializes the `config` module
+│   └── config.py/                   # config file
+│
 ├── .gitignore                       # Git ignored files (e.g., virtual environment, logs)
 ├── README.md                        # Project documentation
 ├── alembic.ini                      # Alembic configuration file
