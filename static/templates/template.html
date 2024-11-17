@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Thread Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .email-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1d1d1d;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .email-body {
+            padding: 20px;
+            color: #333333;
+        }
+        .email-body h1 {
+            font-size: 24px;
+            margin: 0 0 20px;
+        }
+        .email-body p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 20px;
+        }
+        .email-footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            font-size: 12px;
+            color: #777777;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #f4a320;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #e39205;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Email Header -->
+        <div class="email-header">
+            <a href="https://www.google.com"><img src="https://i.ibb.co/9VbPDFL/SEThreads-Logo.jpg" alt="SEThreads-Logo" border="0" width="60" height="60"></a>
+            <h1 style="margin-left: 0.5rem;">SEThreads</h1>
+        </div>
+
+        <!-- Email Body -->
+        <div class="email-body">
+            <h1>Hello {{recipants}},</h1>
+            <p>
+                {{author}} has just created a new thread titled <strong>"{{thread_title}}"</strong>. 
+                Stay updated and join the discussion now!
+            </p>
+            <p>
+                Click the button below to view the thread:
+            </p>
+            <p style="text-align: center;">
+                <a href="{{thread_url}}" class="btn">View Thread</a>
+            </p>
+        </div>
+
+      </div>
+      <!-- Email Footer -->
+      <div class="email-footer">
+          <p>You're receiving this email because you're SOFTWARE ENGINEER</p>
+      </div>
+</body>
+</html>
