@@ -49,12 +49,18 @@ SEThreads-API is the server-side implementation of SEThreads, a web application 
    ```
    
 
-4. **Install dependencies**:
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Run the server**:
+4. **Update .env file**:
+   ```bash
+   DATABASE_URL="<YOUR_DATABASE_URL>"
+   MAILGUN_API_KEY="<YOUR_API_KEY>"
+   ```
+
+4. **Run the server**:
    Start the FastAPI application:
    ```bash
    fastapi dev src/main.py
