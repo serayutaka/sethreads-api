@@ -114,6 +114,7 @@ def update_thread_highlight(db: Session, db_thread: models.Threads):
 def update_thread_likes(db: Session, is_like: bool, student_id: str, db_thread: models.Threads, db_thread_like: models.ThreadsLikes):
     if is_like:
         student_liked = models.ThreadsLikes(
+            course_id = db_thread.course_id,
             thread_id = db_thread.id,
             student_id = student_id
         )

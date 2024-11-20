@@ -7,6 +7,7 @@ class CommentBase(BaseModel):
 
 class CommentCreate(CommentBase):
     comment_from: int
+    course_id: str
     comment_data: str
     posted_by: str
     create_at: str
@@ -16,6 +17,7 @@ class CommentUpdate(BaseModel):
     create_at: str
 
 class CommentForStudent(CommentBase):
+    course_id: str
     comment_data: str
     create_at: str
 

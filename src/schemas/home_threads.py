@@ -20,8 +20,8 @@ class HomeThreadUpdate(BaseModel):
     create_at: str
 
 class HomeThreadForStudent(HomeThreadBase):
+    id: int
     title: str
-    body: str
 
 class HomeThread(HomeThreadBase):
     id: int

@@ -34,6 +34,7 @@ def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpd
 def create_comment(db: Session, comment: CommentCreate):
 
     db_comment = models.Comments(
+        course_id = comment.course_id,
         comment_from = comment.comment_from,
         comment_data = comment.comment_data,
         posted_by = comment.posted_by,

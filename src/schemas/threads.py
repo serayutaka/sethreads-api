@@ -19,8 +19,8 @@ class ThreadUpdate(BaseModel):
     create_at: str
 
 class ThreadForStudent(ThreadBase):
+    id: int
     title: str
-    body: str
 
 class Thread(ThreadBase):
     id: int

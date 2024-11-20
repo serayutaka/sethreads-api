@@ -60,6 +60,7 @@ class ThreadsLikes(Base):
     __tablename__ = "threads_likes"
     
     id = Column(Integer, primary_key=True, autoincrement=True)
+    course_id = Column(String, ForeignKey("courses.course_id"))
     thread_id = Column(Integer, ForeignKey("threads.id"))
     student_id = Column(String, ForeignKey("students.student_id"))
 
@@ -74,6 +75,7 @@ class Comments(Base):
 
     id = Column(Integer, primary_key=True)
     comment_from = Column(Integer, ForeignKey("threads.id"))
+    course_id = Column(String, ForeignKey("courses.course_id"))
     comment_data = Column(String)
     posted_by = Column(String, ForeignKey("students.student_id"))
     create_at = Column(String)

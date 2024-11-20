@@ -30,4 +30,7 @@ class StudentAllAttributes(Student):
     comment: List['CommentForStudent'] = [] #type: ignore
     reply: List['SubCommentForStudent'] = [] #type: ignore
 
+    posted_public: List['HomeThreadForStudent'] = [] #type: ignore
+    comment_public: List['HomeCommentForStudent'] = [] #type: ignore
+    reply_public: List['HomeSubCommentForStudent'] = [] #type: ignore
     
