@@ -18,15 +18,17 @@ def get_all(db: Session, year: str, course_id: str):
         return db.query(models.Students).filter(models.Students.year == year).all()
     else:
         db_student_year = db.query(models.Students).filter(models.Students.year == year).all()
-        if db_student_year is None:
+        
+        if not db_student_year:
             return []
+        
+        students_to_keep = []
         for student in db_student_year:
-            courseID = []
-            for course in student.registered_courses:
-                courseID.append(course.course_id)
-            if course_id not in courseID:
-                db_student_year.remove(student)
-        return db_student_year
+            courseID = [course.course_id for course in student.registered_courses]
+            if course_id in courseID:
+                students_to_keep.append(student)
+        
+        return students_to_keep
 
 def update_ta(db: Session, student_id: str, is_ta: bool, ta_course_id: str):
     db_student = db.query(models.Students).filter(models.Students.student_id == student_id).first()
