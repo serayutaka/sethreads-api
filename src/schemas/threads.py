@@ -21,6 +21,8 @@ class ThreadUpdate(BaseModel):
 class ThreadForStudent(ThreadBase):
     id: int
     title: str
+    likes: int
+    comments: List['CommentForThread'] = None # type: ignore
 
 class Thread(ThreadBase):
     id: int

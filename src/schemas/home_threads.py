@@ -22,6 +22,8 @@ class HomeThreadUpdate(BaseModel):
 class HomeThreadForStudent(HomeThreadBase):
     id: int
     title: str
+    likes: int
+    comments: List['HomeCommentForThread'] = None # type: ignore
 
 class HomeThread(HomeThreadBase):
     id: int
