@@ -17,6 +17,7 @@ class HomeCommentUpdate(BaseModel):
 class HomeCommentForStudent(HomeCommentBase):
     comment_data: str
     create_at: str
+    subcomments: List['HomeSubCommentBase'] = None # type: ignore
 
 class HomeCommentForThread(HomeCommentBase):
     id: int

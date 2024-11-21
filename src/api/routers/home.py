@@ -18,6 +18,15 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
+@router.get("/get", response_model=list[HomeThread])
+def get_home_threads(db: Session = Depends(get_db)):
+    db_threads = home_helper.get_all(db)
+    if db_threads is None:
+        raise HTTPException(status_code=404, detail="No threads found")
+    elif db_threads == []:
+        return []
+    return db_threads
+
 @router.get("/get-all", response_model=list[HomeThread])
 def read_home_threads(limit: int, offset: int, db: Session = Depends(get_db)):
     db_threads = home_helper.find_all(db, limit, offset)

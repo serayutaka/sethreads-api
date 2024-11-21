@@ -3,11 +3,11 @@ from .courses import Course, CourseCreate, CourseBase
 from .threads import Thread, ThreadCreate, ThreadBase, ThreadUpdate, ThreadForStudent
 from .thread_liked import ThreadLikedBase
 from .comments import Comment, CommentCreate, CommentUpdate, CommentForStudent, CommentForThread
-from .subcomments import SubComment, SubCommentCreate, SubCommentUpdate, SubCommentForStudent
+from .subcomments import SubComment, SubCommentCreate, SubCommentUpdate, SubCommentForStudent, SubCommentBase
 from .home_threads import HomeThread, HomeThreadCreate, HomeThreadBase, HomeThreadUpdate, HomeThreadForStudent
 from .homethread_liked import HomeThreadLikedBase
 from .home_comments import HomeCommentForThread, HomeCommentForStudent, HomeComment, HomeCommentCreate, HomeCommentUpdate
-from .home_subcomments import HomeSubComment, HomeSubCommentCreate, HomeSubCommentUpdate, HomeSubCommentForStudent
+from .home_subcomments import HomeSubComment, HomeSubCommentCreate, HomeSubCommentUpdate, HomeSubCommentForStudent, HomeSubCommentBase
 from .files import HomeThreadsFiles, ThreadsFiles
 
 Student.model_rebuild()

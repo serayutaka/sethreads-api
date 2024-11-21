@@ -9,6 +9,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy import and_
 from config.settings import UPLOAD_DIRICTORY
 
+def get_all(db: Session):
+    count = db.query(models.HomeThreads).count()
+    if count == 0:
+        return []
+    return db.query(models.HomeThreads).all()
+
 def find_all(db: Session, limit: int, offset: int):
     count = db.query(models.HomeThreads).count()
     if count == 0:

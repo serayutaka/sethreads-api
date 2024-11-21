@@ -20,6 +20,7 @@ class CommentForStudent(CommentBase):
     course_id: str
     comment_data: str
     create_at: str
+    subcomments: List['SubCommentBase'] = None # type: ignore
 
 class CommentForThread(CommentBase):
     id: int
