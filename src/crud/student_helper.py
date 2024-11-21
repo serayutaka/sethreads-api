@@ -46,7 +46,9 @@ def update_ta(db: Session, student_id: str, is_ta: bool, ta_course_id: str):
         return "Course not found"
     if db_student.year == 1:
         return "First year student cannot be a TA"
-    if ta_course_id[5] >= str(db_student.year):
+    if ta_course_id[0:3] == "010":
+        pass
+    elif ta_course_id[5] >= str(db_student.year):
         return "TA course year is not allowed"
 
     db_student.is_ta = is_ta

@@ -1,6 +1,7 @@
 from typing import List, Union
-from fastapi import APIRouter, Depends, HTTPException 
+from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.orm import Session
+import jwt
 
 from ...common import get_db
 from ...crud import student_helper
@@ -34,7 +35,11 @@ def read_students(year: str, course_id: str, db: Session = Depends(get_db)):
     return db_students
 
 @router.put("/update-ta", response_model=Union[Students, dict])
-def update_ta(student_id: str, is_ta: bool, ta_course_id: str, db: Session = Depends(get_db)):
+def update_ta(student_id: str, is_ta: bool, ta_course_id: str, db: Session = Depends(get_db), x_token: str = Header(None)):
+    decoded_token = jwt.decode(x_token, "mysecretpassword", algorithms=["HS256"])
+    if (decoded_token["sub"]["student_id"] != "admin"):
+        return { "error": "Unauthorized" }
+    
     db_student = student_helper.update_ta(db, student_id, is_ta, ta_course_id)
     if db_student is None:
         raise HTTPException(status_code=404, detail="Student not found")
@@ -47,7 +52,11 @@ def update_ta(student_id: str, is_ta: bool, ta_course_id: str, db: Session = Dep
     return db_student
 
 @router.post("/register-course", response_model=Union[Students, dict])
-def register_course(course: CourseCreate, db: Session = Depends(get_db)):
+def register_course(course: CourseCreate, db: Session = Depends(get_db), x_token: str = Header(None)):
+    decoded_token = jwt.decode(x_token, "mysecretpassword", algorithms=["HS256"])
+    if (decoded_token["sub"]["student_id"] != "admin"):
+        return { "error": "Unauthorized" }
+    
     db_student = student_helper.register_course(db, course)
     if db_student is None:
         raise HTTPException(status_code=404, detail="Student not found")
@@ -63,7 +72,11 @@ def register_course(course: CourseCreate, db: Session = Depends(get_db)):
     return db_student
 
 @router.delete("/withdraw-course", response_model=Union[Students, dict])
-def withdraw_course(student_id: str, course_id: str, db: Session = Depends(get_db)):
+def withdraw_course(student_id: str, course_id: str, db: Session = Depends(get_db), x_token: str = Header(None)):
+    decoded_token = jwt.decode(x_token, "mysecretpassword", algorithms=["HS256"])
+    if (decoded_token["sub"]["student_id"] != "admin"):
+        return { "error": "Unauthorized" }
+    
     db_student = student_helper.withdraw_course(db, student_id, course_id)
     if db_student is None:
         raise HTTPException(status_code=404, detail="Student not found")
