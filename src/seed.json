@@ -579,9 +579,21 @@
                 "year": 2
             },
             {
+                "student_id": "65011331",
+                "name": "Kawin",
+                "surname": "Thimayom",
+                "year": 3
+            },
+            {
+                "student_id": "63011332",
+                "name": "Bob",
+                "surname": "Marley",
+                "year": -2
+            },
+            {
                 "student_id": "admin",
-                "name": "",
-                "surname": "ADMIN",
+                "name": "ADMIN",
+                "surname": "",
                 "year": -1
             }
         ]
@@ -590,295 +602,295 @@
         "target_class": "src.models:Courses",
         "data": [
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011073",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011087",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011090",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011093",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011096",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011103",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011110",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011118",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011140",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011149",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011152",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011158",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011168",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011177",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011212",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011216",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011228",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011235",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011247",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011248",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011287",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011297",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011300",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011304",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011318",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011322",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011336",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011352",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011353",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011362",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011371",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011596",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011614",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011615",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011619",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011623",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011627",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011629",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011637",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011638",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011641",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011642",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011653",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011669",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011670",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011685",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011725",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011731",
                 "year": 1
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "67011755",
                 "year": 1
@@ -1178,295 +1190,295 @@
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011073",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011087",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011090",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011093",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011096",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011103",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011110",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011118",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011140",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011149",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011152",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011158",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011168",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011177",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011212",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011216",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011228",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011235",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011247",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011248",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011287",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011297",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011300",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011304",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011318",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011322",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011336",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011352",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011353",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011362",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011371",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011596",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011614",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011615",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011619",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011623",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011627",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011629",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011637",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011638",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011641",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011642",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011653",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011669",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011670",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011685",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011725",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011731",
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "67011755",
                 "year": 1
@@ -3794,7 +3806,199 @@
                 "year": 2
             },
             {
-                "name": "INTRODUCTION TO CALCULUS",
+                "name": "OPERATING SYSTEMS",
+                "course_id": "01286324",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "THEORY OF COMPUTATION",
+                "course_id": "01286326",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "SOFTWARE DESIGN AND ARCHITECTURE",
+                "course_id": "01286334",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "ARTIFICIAL INTELLIGENCE",
+                "course_id": "01286342",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "WEB SERVICE DEVELOPMENT AND SERVICE-ORIENTED ARChITECTURE",
+                "course_id": "01286622",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "AI PROGRAMMING",
+                "course_id": "01286661",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "MACHINE LEARNING",
+                "course_id": "01286662",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "DATA SCIENCE AND DATA ANALYTICS",
+                "course_id": "01286663",
+                "student_id": "65011331",
+                "year": 3
+            },
+            {
+                "name": "INTRODUCTION TO CALCULAS",
+                "course_id": "01006710",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "CIRCUITS AND ELECTRONICS",
+                "course_id": "01286111",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
+                "course_id": "01286120",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "COMPUTER PROGRAMMING",
+                "course_id": "01286121",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "DIGITAL CITIZEN",
+                "course_id": "96641007",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "INTRODUCTION TO LOGIC",
+                "course_id": "96642170",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "PROBABILITY AND STATISTICS",
+                "course_id": "01006719",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+                "course_id": "01286213",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "DATA STRUCTURES AND ALGORITHMS",
+                "course_id": "01286222",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "WEB PROGRAMMING",
+                "course_id": "01286233",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+                "course_id": "96644042",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "OPERATING SYSTEMS",
+                "course_id": "01286324",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "THEORY OF COMPUTATION",
+                "course_id": "01286326",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "SOFTWARE DESIGN AND ARCHITECTURE",
+                "course_id": "01286334",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "ARTIFICIAL INTELLIGENCE",
+                "course_id": "01286342",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "WEB SERVICE DEVELOPMENT AND SERVICE-ORIENTED ARChITECTURE",
+                "course_id": "01286622",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "AI PROGRAMMING",
+                "course_id": "01286661",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "MACHINE LEARNING",
+                "course_id": "01286662",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "DATA SCIENCE AND DATA ANALYTICS",
+                "course_id": "01286663",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "OBJECT-ORIENTED ANALYSIS AND DESIGN",
+                "course_id": "13016219",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "HUMAN-COMPUTER INTERACTION",
+                "course_id": "13016243",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "SOFTWARE PROJECT 1",
+                "course_id": "13016291",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "BIG DATA",
+                "course_id": "13016394",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "SOFTWARE ENTREPRENEURSHIP",
+                "course_id": "13016399",
+                "student_id": "63011332",
+                "year": -2
+            },
+            {
+                "name": "INTRODUCTION TO CALCULAS",
                 "course_id": "01006710",
                 "student_id": "admin",
                 "year": 1
@@ -3806,7 +4010,7 @@
                 "year": 1
             },
             {
-                "name": "ELEMENTARY SYSTEMS PROGRAMMING",
+                "name": "ELEMENTARY SYSTEM PROGRAMMING",
                 "course_id": "01286120",
                 "student_id": "admin",
                 "year": 1
