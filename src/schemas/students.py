@@ -8,6 +8,13 @@ class StudentBase(BaseModel):
 class StudentCreate(StudentBase):
     password: str
 
+class Author(StudentBase):
+    name: str
+    surname: str
+    year: int | None
+    is_ta: bool | None
+    ta_course_id: str | None
+
 class Student(StudentBase):
     name: str
     surname: str

@@ -1,4 +1,4 @@
-from .students import Student, StudentCreate, StudentBase
+from .students import Student, StudentCreate, StudentBase, Author
 from .enrollment import Enrollment, EnrollmentBase, EnrollmentCreate
 from .course import Course, CourseBase, CourseCreate
 from .threads import Thread, ThreadCreate, ThreadBase, ThreadUpdate

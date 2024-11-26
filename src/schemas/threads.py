@@ -4,13 +4,14 @@ from typing import List, Optional
 class ThreadBase(BaseModel):
     id: int
 
-class ThreadCreate(ThreadBase):
+class ThreadCreate(BaseModel):
+    course_id: str
     title: str
     body: str
     is_highlight: bool | None = False
     create_at: str
     create_by: str
-    files_name: List[str] = None
+    files_name: List[str] = []
 
 class ThreadUpdate(BaseModel):
     title: str
@@ -24,8 +25,8 @@ class Thread(ThreadBase):
     is_highlight: bool | None = False
     create_at: str
 
-    author: Optional['Student'] = None # type: ignore
-    have_files: List['ThreadFiles'] = None # type: ignore
+    author: Optional['Author'] = None # type: ignore
+    have_file: List['ThreadFiles'] = None # type: ignore
     likes: List['ThreadLiked'] = None # type: ignore
     comments: List['Comment'] = None # type: ignore
     

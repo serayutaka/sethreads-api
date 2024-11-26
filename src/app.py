@@ -21,7 +21,6 @@ def seed_database():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    models.Base.metadata.drop_all(bind=engine)
     models.Base.metadata.create_all(bind=engine)
     seed_database()
     yield
