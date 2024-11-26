@@ -5,14 +5,14 @@ from typing import List, Optional
 class SubCommentBase(BaseModel):
     id: int
     
-class SubCommentCreate(SubCommentBase):
+class SubCommentCreate(BaseModel):
     comment_id: int
     body: str
     replied_by: str
     create_at: str
 
 class SubCommentUpdate(BaseModel):
-    replied_by: str
+    body: str
     create_at: str
 
 class SubComment(SubCommentBase):
@@ -21,4 +21,4 @@ class SubComment(SubCommentBase):
     replied_by: str
     create_at: str
 
-    author: Optional['Student'] = None #type: ignore
+    author: Optional['Author'] = None #type: ignore

@@ -5,7 +5,7 @@ from typing import List, Optional
 class CommentBase(BaseModel):
     id: int
 
-class CommentCreate(CommentBase):
+class CommentCreate(BaseModel):
     thread_id: int
     course_id: str
     body: str
@@ -24,4 +24,4 @@ class Comment(CommentBase):
     create_at: str
 
     replies: List['SubComment'] = [] #type: ignore
-    author: Optional['Student'] = None #type: ignore
+    author: Optional['Author'] = None #type: ignore
