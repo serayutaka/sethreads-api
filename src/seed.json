@@ -724,7 +724,7 @@
         ]
     },
     {
-        "target_class": "src.models:Courses",
+        "target_class": "src.models:Enrollment",
         "data": [
             {
                 "student_id": "67011073",

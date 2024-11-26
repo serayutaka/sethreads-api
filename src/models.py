@@ -14,14 +14,14 @@ class Students(Base):
     picture = Column(LargeBinary, nullable=True)
     ta_course_id = Column(String, nullable=True)
 
-    registered = relationship("Courses", cascade="all, delete")
+    registered = relationship("Enrollment", cascade="all, delete")
     posted = relationship("Threads", back_populates="author")
     liked = relationship("ThreadsLikes", cascade="all, delete")
     comment = relationship("ThreadsComments", cascade="all, delete")
     reply = relationship("SubComments", cascade="all, delete")
 
-class Courses(Base):
-    __tablename__ = "courses"
+class Enrollment(Base):
+    __tablename__ = "enrollment"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     course_id = Column(String, ForeignKey("course.id"))
