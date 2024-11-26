@@ -7,6 +7,10 @@ from .database import SessionLocal, engine
 from . import models
 from .api import auth, api
 
+def reset_database():
+    models.Base.metadata.drop_all(bind=engine)
+    models.Base.metadata.create_all(bind=engine)
+
 def is_database_empty(session):
     return session.query(models.Students).first() is None
 
@@ -21,7 +25,7 @@ def seed_database():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    models.Base.metadata.create_all(bind=engine)
+    reset_database()
     seed_database()
     yield
 
