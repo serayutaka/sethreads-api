@@ -27,6 +27,8 @@ class Enrollment(Base):
     course_id = Column(String, ForeignKey("course.id"))
     student_id = Column(String, ForeignKey("students.id"))
 
+    course = relationship("Course", cascade="all, delete")
+
 class Course(Base):
     __tablename__ = "course"
     id = Column(String, primary_key=True, unique=True)
