@@ -119,7 +119,7 @@ def update_thread_likes(db: Session, is_like: bool, student_id: str, db_thread: 
         )
         db.add(student_liked)
     else:
-        if db_thread.likes > 0:
+        if len(db_thread.likes) > 0:
             db_thread_like.delete()
     db.commit()
     db.refresh(db_thread)
