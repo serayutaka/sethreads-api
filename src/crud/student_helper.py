@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+from sqlalchemy import Integer, cast
 import json
 from .. import models
 
@@ -17,13 +18,13 @@ def get_all(db: Session, year: str, course_id: str):
     elif (year != 'all' and course_id == 'all'):
         return db.query(models.Students).filter(models.Students.year == year).all()
     else:
-        db_student_year = db.query(models.Students).filter(models.Students.year == year).all()
-        
+        db_student_year = db.query(models.Students).filter(models.Students.year == year).order_by(cast(models.Students.id, Integer)).all()
         if not db_student_year:
             return []
         
         students_to_keep = []
         for student in db_student_year:
+            print(student.id)
             courseID = [course.course_id for course in student.registered]
             if course_id in courseID:
                 students_to_keep.append(student)
@@ -89,12 +90,11 @@ def withdraw_course(db: Session, student_id: str, course_id: str):
         return None
     if course_id not in courses:
         return "Course not found"
-    enrollment = db.query(models.Enrollment).filter(
+    db.query(models.Enrollment).filter(
         models.Enrollment.course_id == course_id,
         models.Enrollment.student_id == student_id
-    ).first()
+    ).delete()
     
-    db.delete(enrollment)
     db.commit()
     db.refresh(db_student)
     return db_student
