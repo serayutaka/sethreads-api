@@ -14,9 +14,11 @@ def find_courses(db: Session, course_id: str):
 
 def get_all(db: Session, year: str, course_id: str):
     if (year == 'all' and course_id == 'all'):
-        return db.query(models.Students).all()
+        return db.query(models.Students).filter(models.Students.id != "admin",
+                                                models.Students.year > 0
+                                                ).order_by(cast(models.Students.id, Integer)).all()
     elif (year != 'all' and course_id == 'all'):
-        return db.query(models.Students).filter(models.Students.year == year).all()
+        return db.query(models.Students).filter(models.Students.year == year).order_by(cast(models.Students.id, Integer)).all()
     else:
         db_student_year = db.query(models.Students).filter(models.Students.year == year).order_by(cast(models.Students.id, Integer)).all()
         if not db_student_year:
@@ -24,7 +26,6 @@ def get_all(db: Session, year: str, course_id: str):
         
         students_to_keep = []
         for student in db_student_year:
-            print(student.id)
             courseID = [course.course_id for course in student.registered]
             if course_id in courseID:
                 students_to_keep.append(student)
