@@ -17,24 +17,23 @@ def hashing(password: str):
     password_bytes = password.encode("utf-8")
     salt = bcrypt.gensalt()
     hashed_password = bcrypt.hashpw(password_bytes, salt)
-    return hashed_password
+    return hashed_password.decode("utf-8")
 
 @router.post("/sign-up", status_code=status.HTTP_201_CREATED)
 def signup(response: Response, student: schemas.StudentCreate, db: Session = Depends(get_db)):
     try:
-        student = student.model_dump()
-        db_student = db.query(models.Students).filter(models.Students.student_id == student["student_id"]).first()
+        db_student = db.query(models.Students).filter(models.Students.id == student.id).first()
         
         if db_student.hashed_password != None:
             response.status_code = status.HTTP_409_CONFLICT
             return {"error": "Student already signed up"}
         
-        hashed_password = hashing(student["password"])
+        hashed_password = hashing(student.password)
         db_student.hashed_password = hashed_password
         db.commit()
 
         payload = {
-            "sub": { "student_id" : student["student_id"] },
+            "sub": { "student_id" : student.id },
             "exp": datetime.now(timezone.utc) + timedelta(hours=10),
             "iat": datetime.now(timezone.utc),
         }
@@ -51,9 +50,8 @@ class Signin(BaseModel):
     password: str
 @router.post("/sign-in", status_code=status.HTTP_200_OK)
 def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
-    signin = signin.model_dump()
-    student_id = signin["student_id"]
-    password = signin["password"]
+    student_id = signin.student_id
+    password = signin.password
     if (student_id == "admin" and password == "admin"):
         payload = {
             "sub": { "student_id" : student_id },
@@ -64,8 +62,8 @@ def signin(response: Response, signin: Signin, db: Session = Depends(get_db)):
         
         return {"successful": "Admin sign in successfully", "token": token, "admin": True}
     try:
-        student = db.query(models.Students).filter(models.Students.student_id == student_id).first()
-        if bcrypt.checkpw(password.encode("utf-8"), student.hashed_password) == False:
+        student = db.query(models.Students).filter(models.Students.id == student_id).first()
+        if bcrypt.checkpw(password.encode("utf-8"), str.encode(student.hashed_password)) == False:
             response.status_code = status.HTTP_401_UNAUTHORIZED
             return {"error": "Incorrect password"}
 

@@ -35,7 +35,7 @@ def update_comment(comment_id: int, comment: CommentUpdate, db: Session = Depend
 @router.post("/create-comment", response_model=Comment, status_code=201)
 def create_comment(comment: CommentCreate, db: Session = Depends(get_db)):
     db_comment =  comment_helper.create_comment(db, comment)
-    db.refresh(db_comment, ['subcomments', 'author'])
+    db.refresh(db_comment, ['replies', 'author'])
     return db_comment
 
 @router.delete("/delete-comment")
@@ -48,7 +48,7 @@ def delete_comment(comment_id: int, db: Session = Depends(get_db)):
 
 @router.post("/create-subcomment", response_model=SubComment, status_code=201)
 def create_subcomment(subcomment: SubCommentCreate, db: Session = Depends(get_db)):
-    db_comment = comment_helper.find_comment(db, subcomment.reply_of)
+    db_comment = comment_helper.find_comment(db, subcomment.comment_id)
     if db_comment is None:
         raise HTTPException(status_code=404, detail="Comment not found")
     return comment_helper.create_subcomment(db, subcomment)

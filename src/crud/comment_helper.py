@@ -8,24 +8,24 @@ def find_by_thread_id(db: Session, thread_id: int, limit: int, offset: int):
     if check_thread == 0:
         return None
     
-    count = db.query(models.Comments).filter(models.Comments.comment_from == thread_id).count()
+    count = db.query(models.ThreadsComments).filter(models.ThreadsComments.thread_id == thread_id).count()
     if count == 0:
         return []
-    return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).limit(limit).offset(offset).all()
+    return db.query(models.ThreadsComments).filter(models.ThreadsComments.thread_id == thread_id).limit(limit).offset(offset).all()
 
 def find_last_comment(db: Session, thread_id: int):
     check_thread = db.query(models.Threads).filter(models.Threads.id == thread_id).count()
     if check_thread == 0:
         return None
 
-    count = db.query(models.Comments).filter(models.Comments.comment_from == thread_id).count()
+    count = db.query(models.ThreadsComments).filter(models.ThreadsComments.thread_id == thread_id).count()
     if count == 0:
         return None
     
-    return db.query(models.Comments).filter(models.Comments.comment_from == thread_id).order_by(models.Comments.id.desc()).first()
+    return db.query(models.ThreadsComments).filter(models.ThreadsComments.thread_id == thread_id).order_by(models.ThreadsComments.id.desc()).first()
 
-def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpdate):
-    db_comment.comment_data = comment.comment_data
+def update_comment(db: Session, db_comment: models.ThreadsComments, comment: CommentUpdate):
+    db_comment.body = comment.body
     db_comment.create_at = comment.create_at
     db.commit()
     db.refresh(db_comment)
@@ -33,13 +33,13 @@ def update_comment(db: Session, db_comment: models.Comments, comment: CommentUpd
 
 def create_comment(db: Session, comment: CommentCreate):
 
-    db_comment = models.Comments(
+    db_comment = models.ThreadsComments(
+        thread_id = comment.thread_id,
         course_id = comment.course_id,
-        comment_from = comment.comment_from,
-        comment_data = comment.comment_data,
-        posted_by = comment.posted_by,
+        body = comment.body,
+        commented_by = comment.commented_by,
         create_at = comment.create_at
-    )
+   )
 
     db.add(db_comment)
     db.commit()
@@ -47,24 +47,24 @@ def create_comment(db: Session, comment: CommentCreate):
     return db_comment
 
 def find_comment(db: Session, comment_id: int):
-    count = db.query(models.Comments).filter(models.Comments.id == comment_id).count()
+    count = db.query(models.ThreadsComments).filter(models.ThreadsComments.id == comment_id).count()
     if count == 0:
         return None
-    return db.query(models.Comments).filter(models.Comments.id == comment_id).first()
+    return db.query(models.ThreadsComments).filter(models.ThreadsComments.id == comment_id).first()
 
-def delete_comment(db: Session, comment: models.Comments):
+def delete_comment(db: Session, comment: models.ThreadsComments):
     db.delete(comment)
     db.commit()
 
 def create_subcomment(db: Session, subcomment: SubCommentCreate):
-    comment_check = find_comment(db, subcomment.reply_of)
+    comment_check = find_comment(db, subcomment.comment_id)
     if comment_check is None:
         return None
     
     db_subcomment = models.SubComments(
-        reply_of = subcomment.reply_of,
-        posted_by = subcomment.posted_by,
-        reply_data = subcomment.reply_data,
+        comment_id = subcomment.comment_id,
+        replied_by = subcomment.replied_by,
+        body = subcomment.body,
         create_at = subcomment.create_at
     )
 
@@ -80,7 +80,7 @@ def find_subcomment(db: Session, subcomment_id: int):
     return db.query(models.SubComments).filter(models.SubComments.id == subcomment_id).first()
 
 def update_subcomment(db: Session, db_subcomment: models.SubComments, subcomment: SubCommentCreate):
-    db_subcomment.reply_data = subcomment.reply_data
+    db_subcomment.body = subcomment.body
     db_subcomment.create_at = subcomment.create_at
     db.commit()
     db.refresh(db_subcomment)

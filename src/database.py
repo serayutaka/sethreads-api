@@ -6,11 +6,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+SQLALCHEMY_SQLite_DATABASE_URL = os.getenv("DATABASE_SQLite_URL")
+SQLALCHEMY_Postgresql_DATABASE_URL = os.getenv("DATABASE_POSTGRSQL_URL")
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}, pool_pre_ping=True
-)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-Base = declarative_base()
+try:
+    engine = create_engine(
+        SQLALCHEMY_Postgresql_DATABASE_URL,
+        echo=True  # Set to False in production
+    )
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    Base = declarative_base()
+except Exception as e:
+    print(f"Database connection error: {e}")
+    raise
