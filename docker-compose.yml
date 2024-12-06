@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database Service
+  postgres:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+
+  # FastAPI Web Application Service
+  web:
+    build: .
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_POSTGRSQL_URL=postgresql://user:password@postgres:5432/mydatabase
+
+# Persistent volume for PostgreSQL data
+volumes:
+  postgres_data:

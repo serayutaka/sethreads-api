@@ -720,6 +720,11 @@
                 "id": "13016399",
                 "name": "SOFTWARE ENTREPRENEURSHIP",
                 "require_year": 4
+            },
+            {
+                "id": "home",
+                "name": "HOME",
+                "require_year": 0
             }
         ]
     },
