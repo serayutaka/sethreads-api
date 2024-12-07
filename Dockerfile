@@ -20,7 +20,6 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 COPY ./config /code/config
 COPY ./static /code/static
 COPY ./static/templates /code/static/templates
-COPY ./static/uploads /code/static/uploads
 COPY ./src /code/src
 
 # Set the command to run the application
