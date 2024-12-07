@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # PostgreSQL Database Service
   postgres:
     image: postgres:13
     volumes:
@@ -13,9 +12,9 @@ services:
     ports:
       - "5432:5432"
 
-  # FastAPI Web Application Service
   web:
-    build: .
+    image: oxydizer/sethreads-api:latest  # Use the image you built
+    platform: linux/amd64  # Specify the architecture explicitly
     volumes:
       - ./app:/app
     ports:
@@ -25,6 +24,5 @@ services:
     environment:
       - DATABASE_POSTGRSQL_URL=postgresql://user:password@postgres:5432/mydatabase
 
-# Persistent volume for PostgreSQL data
 volumes:
   postgres_data:
