@@ -1,17 +1,6 @@
 version: '3.8'
 
 services:
-  postgres:
-    image: postgres:13
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=mydatabase
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-    ports:
-      - "5432:5432"
-
   web:
     image: oxydizer/sethreads-api:latest  # Use the image you built
     platform: linux/amd64  # Specify the architecture explicitly
@@ -22,7 +11,4 @@ services:
     depends_on:
       - postgres
     environment:
-      - DATABASE_POSTGRSQL_URL=postgresql://user:password@postgres:5432/mydatabase
-
-volumes:
-  postgres_data:
+      - DATABASE_POSTGRESQL_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=require
