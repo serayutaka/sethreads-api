@@ -35,6 +35,13 @@ def read_thread(thread_id: int, course_id: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Thread not found")
     return db_thread
 
+@router.get("/get-title")
+def read_thread_title(thread_id: int, db: Session = Depends(get_db)):
+    db_thread = thread_helper.find_thread(db, thread_id)
+    if db_thread is None:
+        raise HTTPException(status_code=404, detail="Thread not found")
+    return db_thread.title
+
 @router.post("/upload-files")
 async def create_upload_file(files: List[UploadFile]):
     result = await thread_helper.save_files(files, UPLOAD_DIRICTORY)
