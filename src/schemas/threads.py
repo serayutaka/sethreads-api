@@ -20,6 +20,7 @@ class ThreadUpdate(BaseModel):
     create_at: str
 
 class Thread(ThreadBase):
+    course_id: str
     title: str
     body: str
     is_highlight: bool | None = False
