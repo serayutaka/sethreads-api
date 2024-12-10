@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SQLALCHEMY_SQLite_DATABASE_URL = os.getenv("DATABASE_SQLite_URL")
-SQLALCHEMY_Postgresql_DATABASE_URL = os.getenv("DATABASE_POSTGRSQL_URL")
+SQLALCHEMY_Postgresql_DATABASE_URL = os.getenv("DATABASE_POSTGRESQL_URL")
 
 try:
     engine = create_engine(
